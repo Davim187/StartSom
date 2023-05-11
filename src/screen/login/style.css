@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+#main {
+  display: flex;
+  flex-direction: row;
+}
+#MainLogo {
+  background-color: #a33e0fd9;
+  width: 300px;
+  height: 300px;
+  /* min-height: 30%; */
+  border-radius: 50%;
+  text-align: center;
+}
+#imgViolao {
+  width: 60%;
+}
+
+#imgLogo h1 {
+  font-size: 7vh;
+  color: aliceblue;
+}
+#imgLogo hr {
+  width: 60%;
+  margin-left: 18%;
+}
+#imgLogo {
+  background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
+    url(../../img/R.jfif) no-repeat fixed;
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#FormLogin {
+  height: 100vh;
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#User {
+  height: 30px;
+  width: 200px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #a33e0fd9;
+  margin: 50px 0 0 0;
+}
+#Senha {
+  height: 30px;
+  width: 200px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #a33e0fd9;
+}
+.StatusSenha {
+  width: 25px;
+  position: fixed;
+  right: 8%;
+  bottom: 42%;
+}
+#FormLogin h1 {
+  border: none;
+  border-bottom: 2px solid #a33e0fd9;
+  padding: 0 20px;
+}
+#btnAcessar {
+  margin-top: 20px;
+  background-color: #a33e0fd9;
+  border: none;
+  width: 50%;
+  height: 4%;
+  border-radius: 20px;
+}
+#UserError {
+  height: 30px;
+  width: 200px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid red;
+  margin: 50px 0 0 0;
+}
+#SenhaError {
+  height: 30px;
+  width: 200px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid red;
+}
