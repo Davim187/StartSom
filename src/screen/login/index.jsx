@@ -1,43 +1,49 @@
-import React, { useState } from 'react';
-import './style.css';
-import imgLogo from '../../img/violao.png';
-import mostrarSenha from '../../img/padlock_open_icon_237099.png';
-import ocultarSenha from '../../img/padlock_icon_237100.png';
+import React, { useState } from "react";
+import "./style.css";
+import imgLogo from "../../img/violao.png";
+import mostrarSenha from "../../img/padlock_open_icon_237099.png";
+import ocultarSenha from "../../img/padlock_icon_237100.png";
 
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
+import Swal from "sweetalert2";
 
 function Login() {
-  const [AparecerSenha, setAparecerSenha] = useState('password');
-  const [User, setUser] = useState('password');
-  const [Senha, setSenha] = useState('password');
+  const [AparecerSenha, setAparecerSenha] = useState("password");
+  const [User, setUser] = useState("");
+  const [Senha, setSenha] = useState("");
   const [Error, setError] = useState(false);
 
   function MostrarSenha(e) {
     e.preventDefault();
-    AparecerSenha === 'password'
-      ? setAparecerSenha('text')
-      : setAparecerSenha('password');
+    AparecerSenha === "password"
+      ? setAparecerSenha("text")
+      : setAparecerSenha("password");
   }
 
   function entrar(e) {
     e.preventDefault();
-    if (User === '' || Senha === '') {
+    if (User === "" || Senha === "") {
       setError(true);
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Preencha todos os campos',
+        icon: "error",
+        title: "Oops...",
+        text: "Preencha todos os campos",
+      });
+    } else if (Senha.length < 5 || Senha.length > 10) {
+      setError(true);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Senha com minimo de 5 digitos e maximo de 10",
       });
     } else {
       setError(false);
       Swal.fire({
-        icon: 'success',
-        title: 'Sucesso',
-        text: 'Bem vindo ao StartSom',
+        icon: "success",
+        title: "Sucesso",
+        text: "Bem vindo ao StartSom",
       });
-      console.log('Usuario:', User);
-      console.log('Senha:', Senha);
+      console.log("Usuario:", User);
+      console.log("Senha:", Senha);
     }
   }
 
@@ -58,7 +64,7 @@ function Login() {
           <input
             type="text"
             name="User"
-            id={Error === false ? 'User' : 'UserError'}
+            id={Error === false ? "User" : "UserError"}
             placeholder="Usuario"
             onChange={(e) => {
               setUser(e.target.value);
@@ -66,7 +72,7 @@ function Login() {
           />
           <br />
           <div className="senha"></div>
-          {AparecerSenha === 'text' ? (
+          {AparecerSenha === "text" ? (
             <img
               className="StatusSenha"
               src={mostrarSenha}
@@ -84,7 +90,7 @@ function Login() {
           <input
             type={AparecerSenha}
             name="Senha"
-            id={Error === false ? 'Senha' : 'SenhaError'}
+            id={Error === false ? "Senha" : "SenhaError"}
             placeholder="Senha"
             onChange={(e) => {
               setSenha(e.target.value);
