@@ -1,68 +1,68 @@
-import React, { useState } from "react";
-import "./style.css";
-import imgLogo from "../../img/violao.png";
-import mostrarSenha from "../../img/padlock_open_icon_237099.png";
-import ocultarSenha from "../../img/padlock_icon_237100.png";
+import React, { useState } from 'react';
+import './style.css';
+import imgLogo from '../../img/violao.png';
+import mostrarSenha from '../../img/padlock_open_icon_237099.png';
+import ocultarSenha from '../../img/padlock_icon_237100.png';
 
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
 
 function Cadastro() {
-  const [User, setUser] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Senha, setSenha] = useState("");
-  const [ConfirmarSenha, setConfirmarSenha] = useState("");
+  const [User, setUser] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Senha, setSenha] = useState('');
+  const [ConfirmarSenha, setConfirmarSenha] = useState('');
   const [Error, setError] = useState(false);
-  const [AparecerSenha, setAparecerSenha] = useState("password");
+  const [AparecerSenha, setAparecerSenha] = useState('password');
   const [AparecerConfirmarSenha, setAparecerConfirmarSenha] =
-    useState("password");
+    useState('password');
 
   function MostrarSenha(e) {
     e.preventDefault();
-    AparecerSenha === "password"
-      ? setAparecerSenha("text")
-      : setAparecerSenha("password");
+    AparecerSenha === 'password'
+      ? setAparecerSenha('text')
+      : setAparecerSenha('password');
   }
   function MostrarConfirmarSenha(e) {
     e.preventDefault();
-    AparecerConfirmarSenha === "password"
-      ? setAparecerConfirmarSenha("text")
-      : setAparecerConfirmarSenha("password");
+    AparecerConfirmarSenha === 'password'
+      ? setAparecerConfirmarSenha('text')
+      : setAparecerConfirmarSenha('password');
   }
 
   function entrar(e) {
     e.preventDefault();
-    if (User === "" || Email === "" || Senha === "" || ConfirmarSenha === "") {
+    if (User === '' || Email === '' || Senha === '' || ConfirmarSenha === '') {
       setError(true);
       Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Preencha todos os campos",
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Preencha todos os campos',
       });
     } else if (Senha.length < 5 || Senha.length > 10) {
       setError(true);
       Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Senha com minimo de 5 digitos e maximo de 10",
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Senha com minimo de 5 digitos e maximo de 10',
       });
-    } else if (Senha !== ConfirmarSenha ) {
+    } else if (Senha !== ConfirmarSenha) {
       setError(true);
       Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Senhas diferentes",
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Senhas diferentes',
       });
     } else {
       setError(false);
       Swal.fire({
-        icon: "success",
-        title: "Sucesso",
-        text: "Bem vindo ao StartSom",
+        icon: 'success',
+        title: 'Sucesso',
+        text: 'Bem vindo ao StartSom',
       });
-      console.log("Usuario:", User);
-      console.log("Senha:", Email);
-      console.log("Usuario:", Senha);
-      console.log("Senha:", ConfirmarSenha);
+      console.log('Usuario:', User);
+      console.log('Senha:', Email);
+      console.log('Usuario:', Senha);
+      console.log('Senha:', ConfirmarSenha);
     }
   }
 
@@ -83,7 +83,7 @@ function Cadastro() {
           <input
             type="text"
             name="User"
-            id={Error === false ? "User" : "UserError"}
+            id={Error === false ? 'User' : 'UserError'}
             placeholder="Usuario"
             onChange={(e) => {
               setUser(e.target.value);
@@ -93,14 +93,13 @@ function Cadastro() {
           <input
             type="email"
             name="User"
-            id={Error === false ? "Email" : "EmailError"}
+            id={Error === false ? 'Email' : 'EmailError'}
             placeholder="Email"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
           />
-          <br />
-          {AparecerSenha === "text" ? (
+          {AparecerSenha === 'text' ? (
             <img
               className="StatusSenha"
               src={mostrarSenha}
@@ -118,14 +117,13 @@ function Cadastro() {
           <input
             type={AparecerSenha}
             name="Senha"
-            id={Error === false ? "Senha" : "SenhaError"}
+            id={Error === false ? 'Senha' : 'SenhaError'}
             placeholder="Senha"
             onChange={(e) => {
               setSenha(e.target.value);
             }}
           />
-          <br />
-          {AparecerConfirmarSenha === "text" ? (
+          {AparecerConfirmarSenha === 'text' ? (
             <img
               className="StatusConfirmarSenha"
               src={mostrarSenha}
@@ -143,8 +141,8 @@ function Cadastro() {
           <input
             type={AparecerConfirmarSenha}
             name="Senha"
-            id={Error === false ? "ConfirmarSenha" : "ConfirmarSenhaError"}
-            placeholder="Senha"
+            id={Error === false ? 'ConfirmarSenha' : 'ConfirmarSenhaError'}
+            placeholder="Confirmar senha"
             onChange={(e) => {
               setConfirmarSenha(e.target.value);
             }}
