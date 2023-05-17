@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import './style.css';
-import imgLogo from '../../img/violao.png';
+import Title from '../../componentes/title';
 import mostrarSenha from '../../img/padlock_open_icon_237099.png';
 import ocultarSenha from '../../img/padlock_icon_237100.png';
-
 import Swal from 'sweetalert2';
 
 function Login() {
+  // --------------------------------- Constantes --------------------------------- //
+
   const [AparecerSenha, setAparecerSenha] = useState('password');
   const [User, setUser] = useState('');
   const [Senha, setSenha] = useState('');
   const [Error, setError] = useState(false);
+
+  // --------------------------------- Função senha --------------------------------- //
 
   function MostrarSenha(e) {
     e.preventDefault();
@@ -18,6 +21,8 @@ function Login() {
       ? setAparecerSenha('text')
       : setAparecerSenha('password');
   }
+
+  // --------------------------------- Funçoes login --------------------------------- //
 
   function entrar(e) {
     e.preventDefault();
@@ -41,21 +46,23 @@ function Login() {
         icon: 'success',
         title: 'Sucesso',
         text: 'Bem vindo ao StartSom',
+      }).then((resp) => {
+        setTimeout(() => {
+          window.location.href = '/home';
+        }, 500);
       });
       console.log('Usuario:', User);
       console.log('Senha:', Senha);
     }
   }
 
+  // --------------------------------- Dsigner Tela --------------------------------- //
+
   return (
     <>
       <div id="main">
         <div id="imgLogo">
-          <div id="MainLogo">
-            <img id="imgViolao" src={imgLogo} alt="ViolaoLogo" />
-            <h1>StartSom</h1>
-            <hr />
-          </div>
+        <Title/>
         </div>
         <form id="FormLogin">
           <h1>LOGIN</h1>

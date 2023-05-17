@@ -1,0 +1,20 @@
+#MainLogo {
+  background-color: #a33e0fd9;
+  width: 300px;
+  height: 300px;
+  /* min-height: 30%; */
+  border-radius: 50%;
+  text-align: center;
+}
+#imgViolao {
+  width: 60%;
+}
+
+#imglogo h1 {
+  font-size: 7vh;
+  color: aliceblue;
+}
+#imglogo hr {
+  width: 60%;
+  margin-left: 18%;
+}

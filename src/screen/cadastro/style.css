@@ -1,30 +1,15 @@
+/*  --------------------------------- Login ---------------------------------  */
+
 * {
   padding: 0;
   margin: 0;
 }
+
+/*  --------------------------------- Parte Imagem ---------------------------------  */
+
 #main {
   display: flex;
   flex-direction: row;
-}
-#MainLogo {
-  background-color: #a33e0fd9;
-  width: 300px;
-  height: 300px;
-  /* min-height: 30%; */
-  border-radius: 50%;
-  text-align: center;
-}
-#imgViolao {
-  width: 60%;
-}
-
-#imgLogo h1 {
-  font-size: 7vh;
-  color: aliceblue;
-}
-#imgLogo hr {
-  width: 60%;
-  margin-left: 18%;
 }
 #imgLogo {
   background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
@@ -35,6 +20,8 @@
   justify-content: center;
   align-items: center;
 }
+/*  --------------------------------- Parte do formulario ---------------------------------  */
+
 #FormLogin {
   height: 100vh;
   width: 30vw;
@@ -74,7 +61,6 @@
 }
 .StatusSenha {
   width: 24px;
-  height: 23px;
   position: relative;
   left: 90px;
   top: 27px;

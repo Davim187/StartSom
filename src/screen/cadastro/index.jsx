@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import './style.css';
-import imgLogo from '../../img/violao.png';
 import mostrarSenha from '../../img/padlock_open_icon_237099.png';
 import ocultarSenha from '../../img/padlock_icon_237100.png';
+import Title from '../../componentes/title';
 
 import Swal from 'sweetalert2';
 
 function Cadastro() {
+  // --------------------------------- Constantes --------------------------------- //
+
   const [User, setUser] = useState('');
   const [Email, setEmail] = useState('');
   const [Senha, setSenha] = useState('');
@@ -15,6 +17,8 @@ function Cadastro() {
   const [AparecerSenha, setAparecerSenha] = useState('password');
   const [AparecerConfirmarSenha, setAparecerConfirmarSenha] =
     useState('password');
+
+  // --------------------------------- Funçoes senhas --------------------------------- //
 
   function MostrarSenha(e) {
     e.preventDefault();
@@ -29,7 +33,11 @@ function Cadastro() {
       : setAparecerConfirmarSenha('password');
   }
 
+  // --------------------------------- Funçoes cadastrar --------------------------------- //
+
   function entrar(e) {
+    var emailRegex = /[a-z0-9]+@[a-z0-9]+\.[a-z0-9]+/;
+
     e.preventDefault();
     if (User === '' || Email === '' || Senha === '' || ConfirmarSenha === '') {
       setError(true);
@@ -37,6 +45,14 @@ function Cadastro() {
         icon: 'error',
         title: 'Oops...',
         text: 'Preencha todos os campos',
+      });
+    } else if (!emailRegex.test(Email)) {
+      console.log(Email);
+      setError(true);
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Preencha o email corretamente',
       });
     } else if (Senha.length < 5 || Senha.length > 10) {
       setError(true);
@@ -66,15 +82,13 @@ function Cadastro() {
     }
   }
 
+  // --------------------------------- Dsigner Tela --------------------------------- //
+
   return (
     <>
       <div id="main">
         <div id="imgLogo">
-          <div id="MainLogo">
-            <img id="imgViolao" src={imgLogo} alt="ViolaoLogo" />
-            <h1>StartSom</h1>
-            <hr />
-          </div>
+          <Title />
         </div>
         <form id="FormLogin">
           <h1>Cadastrar</h1>
