@@ -1,7 +1,9 @@
 import React from 'react';
 import './title.css';
-
+// ------------------------- Imagem ------------------------- 
 import imgLogo from '../../img/violao.png';
+
+// ------------------------- Title ------------------------- 
 
 function Title() {
   return (

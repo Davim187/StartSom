@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './style.css';
 import Title from '../title';
 
+// ------------------------- Imagem ------------------------- 
+
 import ImgHomeMenu from '../../img/home.ico';
 import ImgViolaoMenu from '../../img/violao.ico';
 import ImgpalhetaMenu from '../../img/palheta.ico';
@@ -12,9 +14,13 @@ import ImgSetaBack from '../../img/arrow-back.ico';
 function Header() {
   const [EsconderMenu, setEsconderMenu] = useState(false);
 
+// ------------------------- FunctionEsconder ------------------------- 
+
   function Menu() {
     EsconderMenu === false ? setEsconderMenu(true) : setEsconderMenu(false);
   }
+
+// ------------------------- Menu ------------------------- 
 
   return (
     <>

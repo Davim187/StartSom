@@ -62,11 +62,10 @@ function Login() {
     <>
       <div id="main">
         <div id="imgLogo">
-        <Title/>
+          <Title />
         </div>
         <form id="FormLogin">
           <h1>LOGIN</h1>
-          <hr />
           <br />
           <input
             type="text"
@@ -108,7 +107,7 @@ function Login() {
           </button>
           <br />
           <h5>
-            <a href="/cadastroUsuario">Nao tenho cadastro!!</a>
+            <a href="Cadastro">Nao tenho cadastro!!</a>
           </h5>
         </form>
       </div>

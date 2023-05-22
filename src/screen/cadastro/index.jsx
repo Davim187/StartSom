@@ -96,7 +96,6 @@ function Cadastro() {
         </div>
         <form id="FormLogin">
           <h1>Cadastrar</h1>
-          <hr />
           <br />
           <input
             type="text"

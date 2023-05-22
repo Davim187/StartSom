@@ -16,5 +16,9 @@
 }
 #imglogo hr {
   width: 60%;
-  margin-left: 18%;
+  margin-left: 6%;
+}
+#imglogo {
+  width: 200px;
+  /* margin-left: 18%; */
 }
