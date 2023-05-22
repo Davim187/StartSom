@@ -73,7 +73,11 @@ function Cadastro() {
       Swal.fire({
         icon: 'success',
         title: 'Sucesso',
-        text: 'Bem vindo ao StartSom',
+        text: 'Cadastrado com sucesso',
+      }).then((resp) => {
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 500);
       });
       console.log('Usuario:', User);
       console.log('Senha:', Email);

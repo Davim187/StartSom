@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from '../../componentes/header';
 
-function Home() {
+function Recomendados() {
   return (
     <>
-    <Header />
+      <Header />
+      <h1>Recomendados</h1>
     </>
   );
 }
 
-export default Home;
+export default Recomendados;

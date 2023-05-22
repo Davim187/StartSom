@@ -1,3 +1,7 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
 #header {
   background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
     url('../../img/R.jfif') no-repeat fixed center;
@@ -6,16 +10,54 @@
 }
 #banner {
   width: 100%;
-  height: 365px;
-  background-color: aqua;
+  height: 625px;
+}
+#nav {
+  background-color: red;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#nav {
-  background-color: red;
-  width: 5%;
+#menu {
+  background-color: aliceblue;
+  padding: 25px;
+  border-radius: 50px;
+  width: 4%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  left: 89%;
+  bottom: 28%;
+}
+#esconderMenu {
+  display: none;
+}
+#esconder {
+  cursor: pointer;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 50px;
+  width: 60px;
+  position: relative;
+  left: 90%;
+  bottom: 30%;
+}
+#menu ul li {
+  list-style: none;
+}
+#title {
+  position: relative;
+  left: 40%;
+  width: 10%;
+  top: 20%;
+}
+@keyframes slidein {
+  from {
+    transform: translateX(50px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }

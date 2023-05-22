@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from '../../componentes/header';
 
-function Home() {
+function Aprender() {
   return (
     <>
-    <Header />
+      <Header />
+      <h1>Aprender</h1>
     </>
   );
 }
 
-export default Home;
+export default Aprender;
