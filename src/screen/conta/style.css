@@ -61,16 +61,11 @@
   width: 60%;
   min-width: 290px;
   border-radius: 20px;
+  overflow-y: auto;
 }
 
 .lista button {
   background-color: transparent;
-  border: none;
-  position: relative;
-  top: 10px;
-}
-.lixo button {
-  background-color: rgb(255, 0, 0);
   border: none;
   position: relative;
   top: 10px;
@@ -106,6 +101,7 @@
 #deletar {
   position: sticky;
   left: 80%;
+  cursor: pointer;
 }
 /*********************************************Footer*********************************************/
 .midia {
