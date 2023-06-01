@@ -4,21 +4,21 @@ import './style.css';
 
 //************************************* Img ************************************
 
-import notas from '../../img/notas.png';
-import C from '../../img/notasMaior/C.png';
-import D from '../../img/notasMaior/D.png';
-import E from '../../img/notasMaior/E.png';
-import F from '../../img/notasMaior/F.png';
-import G from '../../img/notasMaior/G.png';
-import A from '../../img/notasMaior/A.png';
-import B from '../../img/notasMaior/B.png';
-import Cm from '../../img/notasMenor/Cm.png';
-import Dm from '../../img/notasMenor/Dm.png';
-import Em from '../../img/notasMenor/Em.png';
-import Fm from '../../img/notasMenor/Fm.png';
-import Gm from '../../img/notasMenor/Gm.png';
-import Am from '../../img/notasMenor/Am.png';
-import Bm from '../../img/notasMenor/Bm.png';
+import notas from '../../img/aprender/notas.png';
+import C from '../../img/aprender/notasMaior/C.png';
+import D from '../../img/aprender/notasMaior/D.png';
+import E from '../../img/aprender/notasMaior/E.png';
+import F from '../../img/aprender/notasMaior/F.png';
+import G from '../../img/aprender/notasMaior/G.png';
+import A from '../../img/aprender/notasMaior/A.png';
+import B from '../../img/aprender/notasMaior/B.png';
+import Cm from '../../img/aprender/notasMenor/Cm.png';
+import Dm from '../../img/aprender/notasMenor/Dm.png';
+import Em from '../../img/aprender/notasMenor/Em.png';
+import Fm from '../../img/aprender/notasMenor/Fm.png';
+import Gm from '../../img/aprender/notasMenor/Gm.png';
+import Am from '../../img/aprender/notasMenor/Am.png';
+import Bm from '../../img/aprender/notasMenor/Bm.png';
 
 function Aprender() {
   return (

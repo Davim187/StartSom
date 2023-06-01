@@ -83,77 +83,9 @@ nav label img:hover {
 }
 /********************************************* responsivo ********************************************/
 
-
-@media (max-width: 1150px) {
-  #menu ul li {
-      background-color: aliceblue;
-      margin: 10px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border-color: transparent;
-      padding: 10px;
-      overflow-y: hidden;
-  }
-
-  #menu {
-      position: relative;
-      left: 94%;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: 2px solid rgb(255, 255, 255);
-      width: 60px;
-      border-radius: 40px;
-
-  }
-
-  #menu img {
-      position: relative;
-      left: 0px;
-      top: 0px;
-      width: 20px;
-      height: 20px;
-
-  }
-
-  input[type="checkbox"] {
-      display: none;
-
-  }
-
-  input[type="checkbox"]:checked+div {
-      display: none;
-
-  }
-
-  nav {
-      height: 100%;
-      padding: 80px 50px 0 50px;
-      position: relative;
-      bottom: 330px;
-  }
-
-  nav label img {
-      position: relative;
-      left: 95%;
-      width: 40px;
-      bottom: 20px;
-      background-color: rgb(255, 255, 255);
-      border-radius: 50%;
-      transition: transform .35s;
-  }
-
-
-  nav label img:hover {
-      transform: translate(1.15);
+@media screen and (max-width: 1200px) {
+  .lista li {
+    padding: 10px;
+    margin: 20px 5px;
   }
 }
-@media screen and (max-width: 1200px){
-  .lista li{
-      padding: 10px;
-      margin: 20px 5px;
-      
-  }
-}
-

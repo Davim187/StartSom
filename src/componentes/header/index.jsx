@@ -2,25 +2,25 @@ import React, { useState } from 'react';
 import './style.css';
 import Title from '../title';
 
-// ------------------------- Imagem ------------------------- 
+// ------------------------- Imagem -------------------------
 
-import ImgHomeMenu from '../../img/home.ico';
-import ImgViolaoMenu from '../../img/violao.ico';
-import ImgpalhetaMenu from '../../img/palheta.ico';
-import ImgContaMenu from '../../img/conta.ico';
-import ImgSetaFront from '../../img/arrow-front.ico';
-import ImgSetaBack from '../../img/arrow-back.ico';
+import ImgHomeMenu from '../../img/menu/home.ico';
+import ImgViolaoMenu from '../../img/menu/violao.ico';
+import ImgpalhetaMenu from '../../img/menu/palheta.ico';
+import ImgContaMenu from '../../img/menu/conta.ico';
+import ImgSetaFront from '../../img/menu/arrow-front.ico';
+import ImgSetaBack from '../../img/menu/arrow-back.ico';
 
 function Header() {
   const [EsconderMenu, setEsconderMenu] = useState(false);
 
-// ------------------------- FunctionEsconder ------------------------- 
+  // ------------------------- FunctionEsconder -------------------------
 
   function Menu() {
     EsconderMenu === false ? setEsconderMenu(true) : setEsconderMenu(false);
   }
 
-// ------------------------- Menu ------------------------- 
+  // ------------------------- Menu -------------------------
 
   return (
     <>

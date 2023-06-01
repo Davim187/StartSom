@@ -13,7 +13,7 @@
 }
 #imgLogo {
   background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
-    url(../../img/R.jfif) no-repeat fixed;
+    url(../../img/recomendados/R.jfif) no-repeat fixed;
   height: 100vh;
   width: 70%;
   display: flex;

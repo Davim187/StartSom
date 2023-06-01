@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from '../../componentes/header';
 
-import CPX700 from '../../img/CPX700 – Yamaha.jpg';
-import MD18 from '../../img/4370370965_1.jpg';
-import NF14 from '../../img/eb696fd61b.jpg';
-import Ac39 from '../../img/f96fa7e9242c79dd64db7355bea269f6.jpg';
-import RX201 from '../../img/8851296610681f5f39.jpg';
+import CPX700 from '../../img/recomendados/CPX700 – Yamaha.jpg';
+import MD18 from '../../img/recomendados/4370370965_1.jpg';
+import NF14 from '../../img/recomendados/eb696fd61b.jpg';
+import Ac39 from '../../img/recomendados/f96fa7e9242c79dd64db7355bea269f6.jpg';
+import RX201 from '../../img/recomendados/8851296610681f5f39.jpg';
 
 import './style.css';
 

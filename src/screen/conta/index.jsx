@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import Header from '../../componentes/header';
 import './style.css';
 import Swal from 'sweetalert2';
-import perfil from '../../img/perfil.png';
-import mais from '../../img/+.png';
-import lixo from '../../img/lixo.png';
-import { Await } from 'react-router-dom';
+
+import perfil from '../../img/conta/perfil.png';
+import mais from '../../img/conta/+.png';
+import lixo from '../../img/conta/lixo.png';
 
 function Conta() {
   const [id, setId] = useState(1);
