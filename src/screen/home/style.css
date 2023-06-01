@@ -7,7 +7,6 @@
 
 .esplicacoes div {
   height: 450px;
-  overflow-y: hidden;
 }
 
 .violao-acustico h3 {
@@ -104,12 +103,13 @@
   padding: 0 0 0 100px;
   position: relative;
   bottom: 140px;
+
   width: 70%;
   left: 23%;
 }
 
 .violao-eletrico p {
-  font-size: 20px;
+  font-size: 18px;
   padding: 50px;
   position: relative;
   bottom: 123px;
@@ -118,9 +118,10 @@
 }
 
 .violao-eletrico img {
-  height: 65%;
-  width: 25%;
+  height: 60%;
+  width: 20%;
   position: relative;
+
   top: 120px;
   transition: transform 0.35s;
 }
@@ -144,4 +145,134 @@ hr {
 .midia p {
   position: relative;
   top: 50px;
+}
+/*********************************************Responsivo*********************************************/
+@media screen and (max-width: 800px) {
+  .esplicacoes div {
+    height: 100%;
+  }
+
+  .violao-acustico h3 {
+    text-align: center;
+    position: relative;
+    left: 5%;
+    padding: 10% 10% 10% 10%;
+  }
+
+  .violao-acustico img {
+    height: 70%;
+    width: 20%;
+    position: relative;
+    top: 30px;
+    left: 30%;
+    padding: 5% 5% 5% 8%;
+  }
+
+  .violao-acustico p {
+    font-size: 18px;
+    top: 50px;
+    text-align: center;
+    position: relative;
+    left: 6%;
+    padding: 5% 5% 20% 8%;
+  }
+
+  .violao-semi-acustico h3 {
+    text-align: center;
+    position: relative;
+    left: 5%;
+    padding: 10%;
+  }
+
+  .violao-semi-acustico p {
+    font-size: 18px;
+    top: 50px;
+    text-align: center;
+    position: relative;
+    left: 6%;
+    padding: 5% 5% 20% 8%;
+  }
+
+  .violao-semi-acustico img {
+    height: 80%;
+    width: 40%;
+    position: relative;
+    left: 25%;
+    top: 90px;
+    padding: 5% 5% 5% 8%;
+  }
+
+  .violao-eletroacustico h3 {
+    text-align: center;
+    position: relative;
+    left: 5%;
+    padding: 10%;
+    bottom: 50px;
+  }
+
+  .violao-eletroacustico p {
+    font-size: 18px;
+    top: 119px;
+    text-align: center;
+    position: relative;
+    left: 6%;
+    padding: 5% 5% 45% 8%;
+  }
+
+  .violao-eletroacustico img {
+    height: 70%;
+    width: 30%;
+    position: relative;
+    top: 250px;
+    left: 25%;
+    padding: 5% 5% 5% 8%;
+  }
+
+  .violao-eletrico h3 {
+    text-align: center;
+    position: relative;
+    left: 5%;
+    padding: 10%;
+    bottom: 180px;
+  }
+
+  .violao-eletrico p {
+    font-size: 18px;
+    top: 50px;
+    text-align: center;
+    position: relative;
+    left: 6%;
+    padding: 5% 5% 20% 8%;
+  }
+
+  .violao-eletrico img {
+    height: 70%;
+    width: 30%;
+    position: relative;
+    top: 180px;
+    left: 30%;
+    padding: 15% 5% 5% 8%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .violao-eletrico h3 {
+    font-size: 28px;
+    position: relative;
+    top: -66px;
+  }
+
+  @media screen and (max-width: 280px) {
+    .violao-eletrico h3 {
+      font-size: 28px;
+      top: 12px;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .violao-eletrico h3 {
+      font-size: 28px;
+      top: 95px;
+    }
+  }
 }
