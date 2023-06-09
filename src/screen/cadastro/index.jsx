@@ -3,6 +3,7 @@ import './style.css';
 import mostrarSenha from '../../img/padlock_open_icon_237099.png';
 import ocultarSenha from '../../img/padlock_icon_237100.png';
 import Title from '../../componentes/title';
+import api from '../../services/api';
 
 import Swal from 'sweetalert2';
 
@@ -35,10 +36,9 @@ function Cadastro() {
 
   // --------------------------------- Funçoes cadastrar --------------------------------- //
 
-  function entrar(e) {
-    var emailRegex = /[a-z0-9]+@[a-z0-9]+\.[a-z0-9]+/;
-
+  async function entrar(e) {
     e.preventDefault();
+    var emailRegex = /[a-z0-9]+@[a-z0-9]+\.[a-z0-9]+/;
     if (User === '' || Email === '' || Senha === '' || ConfirmarSenha === '') {
       setError(true);
       Swal.fire({
@@ -69,20 +69,45 @@ function Cadastro() {
         text: 'Senhas diferentes',
       });
     } else {
-      setError(false);
-      Swal.fire({
-        icon: 'success',
-        title: 'Sucesso',
-        text: 'Cadastrado com sucesso',
-      }).then((resp) => {
-        setTimeout(() => {
-          window.location.href = '/';
-        }, 500);
-      });
-      console.log('Usuario:', User);
-      console.log('Senha:', Email);
-      console.log('Usuario:', Senha);
-      console.log('Senha:', ConfirmarSenha);
+      try {
+        await api
+          .post('cadastro', {
+            usuario: User,
+            email: Email,
+            senha: Senha,
+          })
+          .then((res) => {
+            console.log(res.data);
+            setError(false);
+            Swal.fire({
+              icon: 'success',
+              title: 'Sucesso',
+              text: 'Cadastrado com sucesso',
+            }).then((resp) => {
+              setTimeout(() => {
+                window.location.href = '/';
+              }, 500);
+            });
+          });
+      } catch (error) {
+        console.log(error.response.status);
+        const status = error.response.status;
+        if (status === 400) {
+          console.log('Email ja cadastrado');
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Email ja cadastrado',
+          });
+        } else if (status === 422) {
+          console.log('Verifique se os dados estao preenchido corretamente');
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Verifique se os dados estao preenchido corretamente',
+          });
+        }
+      }
     }
   }
 
@@ -109,7 +134,7 @@ function Cadastro() {
           <br />
           <input
             type="email"
-            name="User"
+            name="Email"
             id={Error === false ? 'Email' : 'EmailError'}
             placeholder="Email"
             onChange={(e) => {
