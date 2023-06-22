@@ -9,16 +9,14 @@
 
 #main {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 #imgLogo {
   background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
     url(../../img/recomendados/R.jfif) no-repeat fixed;
   height: 100vh;
   width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 /*  --------------------------------- Parte do formulario ---------------------------------  */
 
@@ -112,4 +110,22 @@
   outline: none;
   border: none;
   border-bottom: 1px solid red;
+}
+@media screen and (max-width: 785px) {
+  body {
+    background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
+      url(../../img/recomendados/R.jfif) no-repeat fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #imgLogo {
+    width: 35%;
+    justify-content: none;
+  }
+  #FormLogin {
+    background-color: aliceblue;
+    height: 60vh;
+    width: 70%;
+  }
 }

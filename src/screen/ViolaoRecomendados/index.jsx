@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../../componentes/header';
 
 import CPX700 from '../../img/recomendados/CPX700 – Yamaha.jpg';
@@ -10,6 +10,11 @@ import RX201 from '../../img/recomendados/8851296610681f5f39.jpg';
 import './style.css';
 
 function Recomendados() {
+  useEffect(() => {
+    if (!localStorage.getItem('User')) {
+      window.location.href = '/';
+    }
+  });
   return (
     <>
       <Header />

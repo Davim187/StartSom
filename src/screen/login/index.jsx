@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import Title from '../../componentes/title';
 import mostrarSenha from '../../img/padlock_open_icon_237099.png';
 import ocultarSenha from '../../img/padlock_icon_237100.png';
 import Swal from 'sweetalert2';
 import api from '../../services/api';
+import { Await } from 'react-router-dom';
 
 function Login() {
+  useEffect(() => {
+    if (localStorage.getItem('User')) {
+      window.location.href = '/home';
+    }
+  });
+
   // --------------------------------- Constantes --------------------------------- //
 
   const [AparecerSenha, setAparecerSenha] = useState('password');
@@ -49,8 +56,13 @@ function Login() {
             senha: Senha,
           })
           .then((res) => {
-            console.log(res);
+            console.log(res.data);
+            var token = res.data.token;
+            var usuario = res.data.user;
+            console.log(token);
             setError(false);
+            localStorage.setItem('Token', JSON.stringify(token));
+            localStorage.setItem('User', JSON.stringify(usuario));
             Swal.fire({
               icon: 'success',
               title: 'Sucesso',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import mostrarSenha from '../../img/padlock_open_icon_237099.png';
 import ocultarSenha from '../../img/padlock_icon_237100.png';
@@ -8,6 +8,11 @@ import api from '../../services/api';
 import Swal from 'sweetalert2';
 
 function Cadastro() {
+  useEffect(() => {
+    if (localStorage.getItem('User')) {
+      window.location.href = '/home';
+    }
+  });
   // --------------------------------- Constantes --------------------------------- //
 
   const [User, setUser] = useState('');

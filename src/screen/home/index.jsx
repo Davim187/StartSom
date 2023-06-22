@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../../componentes/header';
 import './style.css';
 /******************************************* Img *******************************************/
@@ -6,8 +6,14 @@ import acustico from '../../img/home/Acustico.png';
 import semiAcustico from '../../img/home/Semi-acustico.png';
 import eletroacustico from '../../img/home/eletroacustico.png';
 import eletrico from '../../img/home/eletrico.png';
+import userEvent from '@testing-library/user-event';
 
 function Home() {
+  useEffect(() => {
+    if (!localStorage.getItem('User')) {
+      window.location.href = '/';
+    }
+  });
   return (
     <div>
       {/******************************************* Header *******************************************/}
