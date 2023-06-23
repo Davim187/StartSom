@@ -6,37 +6,19 @@
 }
 
 /*  --------------------------------- Parte Imagem ---------------------------------  */
-
 #main {
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-#MainLogo {
-  background-color: #a33e0fd9;
-  width: 300px;
-  height: 300px;
-  /* min-height: 30%; */
-  border-radius: 50%;
-  text-align: center;
-}
-#imgViolao {
-  width: 60%;
-}
-
-#imgLogo h1 {
-  font-size: 7vh;
-  color: aliceblue;
-}
-#imgLogo hr {
-  width: 60%;
-  margin-left: 18%;
+  justify-content: center;
 }
 #imgLogo {
   background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
     url(../../img/recomendados/R.jfif) no-repeat fixed;
   height: 100vh;
-  width: 70%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*  --------------------------------- Parte do formulario ---------------------------------  */
@@ -97,4 +79,33 @@
   outline: none;
   border: none;
   border-bottom: 1px solid red;
+}
+@media screen and (max-width: 785px) {
+  body {
+    background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
+      url(../../img/recomendados/R.jfif) no-repeat fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+  }
+  body {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  #imgLogo {
+    display: none;
+  }
+  #FormLogin {
+    background-color: #fff;
+    height: 60vh;
+    width: 70%;
+    border-radius: 3%;
+  }
+  #main {
+    height: 100vh;
+    width: 100vw;
+  }
 }

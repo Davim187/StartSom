@@ -8,7 +8,7 @@ import imgLogo from '../../img/menu/violao.png';
 function Title() {
   return (
     <>
-      <div id="imglogo">
+      <div id="logoImg">
         <div id="MainLogo">
           <img id="imgViolao" src={imgLogo} alt="ViolaoLogo" />
           <h1>StartSom</h1>

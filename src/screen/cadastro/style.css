@@ -16,7 +16,10 @@
   background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
     url(../../img/recomendados/R.jfif) no-repeat fixed;
   height: 100vh;
-  width: 70%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /*  --------------------------------- Parte do formulario ---------------------------------  */
 
@@ -27,6 +30,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #fff;
 }
 #User {
   height: 30px;
@@ -118,14 +122,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-y: hidden;
   }
   #imgLogo {
-    width: 35%;
-    justify-content: none;
+    display: none;
   }
   #FormLogin {
-    background-color: aliceblue;
+    background-color: #fff;
     height: 60vh;
     width: 70%;
+    border-radius: 3%;
+  }
+  #main {
+    height: 100vh;
+    width: 100vw;
+  }
+  .StatusSenha {
+    top: 23px;
+  }
+  .StatusConfirmarSenha {
+    top: 23px;
   }
 }

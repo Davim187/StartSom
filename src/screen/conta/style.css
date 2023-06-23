@@ -1,9 +1,11 @@
 /**********************************************Perfil**********************************************/
+body {
+  background-color: #fff;
+}
 .PerfilC {
   text-align: center;
   font-size: 170%;
 }
-
 .PerfilC img {
   width: 15%;
   height: 15%;

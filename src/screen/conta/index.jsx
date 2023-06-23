@@ -11,17 +11,33 @@ import lixo from '../../img/conta/lixo.png';
 function Conta() {
   const [InputTarefas, setInputTarefas] = useState('');
   const [lista, setLista] = useState([]);
+  const [getAlitivades, setGetAtividades] = useState(
+    JSON.parse(localStorage.getItem('TarefaUse'))
+  );
   const [User, setUser] = useState(JSON.parse(localStorage.getItem('User')));
   var id;
   useEffect(() => {
     if (!localStorage.getItem('User')) {
       window.location.href = '/';
     }
+    getAtividades();
+    const atualizar = localStorage.getItem('TarefaUse');
+    setLista(JSON.parse(atualizar));
   }, []);
-  setTimeout(() => {
-    console.log(lista);
-    localStorage.setItem('TarefaUser', JSON.stringify(lista));
-  }, 500);
+
+  async function getAtividades() {
+    await api.get(`/pegarAtividade/${User.id}`).then((res) => {
+      console.log(res.data.tarefas);
+      localStorage.setItem('TarefaUse', JSON.stringify(res.data.tarefas));
+      const result = localStorage.getItem('TarefaUse');
+      console.log(getAlitivades);
+      setLista(getAlitivades);
+    });
+  }
+  // setTimeout(() => {
+  //   console.log(lista);
+  //   localStorage.setItem('TarefaUse', JSON.stringify(lista));
+  // }, 500);
   function SairUserLogin() {
     localStorage.removeItem('Token');
     localStorage.removeItem('User');
@@ -34,33 +50,51 @@ function Conta() {
         title: 'Oops...',
         text: 'Preencha o campo corretamente',
       });
+    } else if (InputTarefas.length <= 3) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Minimo de 4 digitos',
+      });
     } else {
-      id = parseInt(Math.random() * 10000000000) + String(User.id);
-      await api
-        .post('/cadastraAtividade', {
-          codigo: id,
-          idUsuario: User.id,
-          atividade: InputTarefas,
-          status: 1,
-        })
-        .then((res) => {
-          console.log(res.data);
-          setLista([...lista, { id: id, NomeTarefa: InputTarefas }]);
-          setInputTarefas('');
-        });
+      try {
+        id = parseInt(Math.random() * 10000000000) + String(User.id);
+        await api
+          .post('/cadastraAtividade', {
+            codigo: id,
+            idUsuario: User.id,
+            atividade: InputTarefas,
+            status: 1,
+          })
+          .then((res) => {
+            console.log(res.data);
+            setLista([...lista, { id: id, NomeTarefa: InputTarefas }]);
+            setInputTarefas('');
+          });
+      } catch (error) {
+        const status = error.response.status;
+        if (status === 401) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Tarefa ja cadastrada',
+          });
+        }
+      }
     }
   };
-  const remove = async (id) => {
+  const remove = async (codigo) => {
     await api
-      .patch(`/deletAtividade/${id}`, {
+      .patch(`/deletAtividade/${codigo}`, {
         status: 2,
       })
       .then((res) => {
         console.log(res.data);
-        const filterDelet = lista.filter((todo) => todo.id !== id);
+        const filterDelet = lista.filter((todo) => todo.codigo !== codigo);
         setLista(filterDelet);
       });
   };
+
   return (
     <>
       <Header />
@@ -99,7 +133,8 @@ function Conta() {
               <img src={mais} alt="Adicionar" style={{ cursor: 'pointer' }} />
             </button>
             <ul id="list" style={{ listStyle: 'none' }}>
-              {lista.map((t) => {
+              {
+                /* {lista.map((t) => {
                 return (
                   <li id={`${t.id}`} key={`_${t.NomeTarefa}_${t.id}`}>
                     {' '}
@@ -109,7 +144,19 @@ function Conta() {
                     </button>
                   </li>
                 );
-              })}
+              })} */
+                getAlitivades.map((t) => {
+                  return (
+                    <li id={`${t.codigo}`} key={`_${t.atividade}_${t.id}`}>
+                      {' '}
+                      {t.atividade}
+                      <button id="deletar" onClick={() => remove(t.codigo)}>
+                        <img src={lixo} alt="Lixo" />
+                      </button>
+                    </li>
+                  );
+                })
+              }
             </ul>
           </div>
         </div>

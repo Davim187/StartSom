@@ -10,17 +10,16 @@
   width: 60%;
 }
 
-#imglogo h1 {
+#logoImg h1 {
   font-size: 7vh;
   color: aliceblue;
 }
-#imglogo hr {
+#logoImg hr {
   width: 60%;
   margin-left: 6%;
 }
-#imglogo {
-  width: 200px;
-  /* margin-left: 18%; */
+#logoImg {
+  width: 300px;
 }
 @media screen and (max-width: 785px) {
   #MainLogo {
