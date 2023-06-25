@@ -81,7 +81,7 @@
   border-bottom: 1px solid red;
 }
 @media screen and (max-width: 785px) {
-  body {
+  #body {
     background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
       url(../../img/recomendados/R.jfif) no-repeat fixed;
     display: flex;
@@ -89,7 +89,7 @@
     justify-content: center;
     overflow-y: hidden;
   }
-  body {
+  #body {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -o-transform: rotate(360deg);

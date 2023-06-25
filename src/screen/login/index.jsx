@@ -106,6 +106,7 @@ function Login() {
 
   return (
     <>
+    <div id="body">
       <div id="main">
         <div id="imgLogo">
           <Title />
@@ -156,6 +157,7 @@ function Login() {
             <a href="Cadastro">Nao tenho cadastro!!</a>
           </h5>
         </form>
+      </div>
       </div>
     </>
   );

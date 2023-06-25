@@ -120,6 +120,7 @@ function Cadastro() {
 
   return (
     <>
+    <div id="body">
       <div id="main">
         <div id="imgLogo">
           <Title />
@@ -203,6 +204,7 @@ function Cadastro() {
             <a href="/">Ja tenho cadastro!!</a>
           </h5>
         </form>
+      </div>
       </div>
     </>
   );

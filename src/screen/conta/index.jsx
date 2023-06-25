@@ -20,24 +20,15 @@ function Conta() {
     if (!localStorage.getItem('User')) {
       window.location.href = '/';
     }
-    getAtividades();
     const atualizar = localStorage.getItem('TarefaUse');
     setLista(JSON.parse(atualizar));
   }, []);
 
-  async function getAtividades() {
-    await api.get(`/pegarAtividade/${User.id}`).then((res) => {
-      console.log(res.data.tarefas);
-      localStorage.setItem('TarefaUse', JSON.stringify(res.data.tarefas));
-      const result = localStorage.getItem('TarefaUse');
-      console.log(getAlitivades);
-      setLista(getAlitivades);
-    });
-  }
   // setTimeout(() => {
   //   console.log(lista);
   //   localStorage.setItem('TarefaUse', JSON.stringify(lista));
-  // }, 500);
+  // }, 500)
+   
   function SairUserLogin() {
     localStorage.removeItem('Token');
     localStorage.removeItem('User');
@@ -68,10 +59,32 @@ function Conta() {
           })
           .then((res) => {
             console.log(res.data);
-            setLista([...lista, { id: id, NomeTarefa: InputTarefas }]);
-            setInputTarefas('');
-          });
-      } catch (error) {
+            setInputTarefas('')
+            Swal.fire({
+              title: 'Aguarde',
+              text: 'Cadastrando tarefa',
+              timer: 2000,
+              didOpen: () => {
+                  Swal.showLoading()
+                }
+            })
+            
+           .then(async ()=>{
+              Swal.fire({
+                icon: 'success',
+                title: 'Sucesso',
+                text: 'Tarefa ja cadastrada',
+              }).then(() =>{window.location.reload()})
+              await api.get(`/pegarAtividade/${User.id}`).then((res) => {
+                console.log(res.data.tarefas);
+                localStorage.setItem('TarefaUse', JSON.stringify(res.data.tarefas));
+                console.log(getAlitivades);
+                setLista(getAlitivades);
+              })
+              
+            })})
+      }
+             catch (error) {
         const status = error.response.status;
         if (status === 401) {
           Swal.fire({
@@ -83,15 +96,19 @@ function Conta() {
       }
     }
   };
-  const remove = async (codigo) => {
+  const remove = async (codigo, e) => {
     await api
       .patch(`/deletAtividade/${codigo}`, {
         status: 2,
       })
-      .then((res) => {
-        console.log(res.data);
-        const filterDelet = lista.filter((todo) => todo.codigo !== codigo);
-        setLista(filterDelet);
+      .then(async (res) => {
+        await api.get(`/pegarAtividade/${User.id}`).then((res) => {
+          console.log(res.data.tarefas);
+          localStorage.setItem('TarefaUse', JSON.stringify(res.data.tarefas));
+          console.log(getAlitivades);
+          setLista(getAlitivades);
+        })
+        window.location.reload()
       });
   };
 
@@ -133,19 +150,7 @@ function Conta() {
               <img src={mais} alt="Adicionar" style={{ cursor: 'pointer' }} />
             </button>
             <ul id="list" style={{ listStyle: 'none' }}>
-              {
-                /* {lista.map((t) => {
-                return (
-                  <li id={`${t.id}`} key={`_${t.NomeTarefa}_${t.id}`}>
-                    {' '}
-                    {t.NomeTarefa}
-                    <button id="deletar" onClick={() => remove(t.id)}>
-                      <img src={lixo} alt="Lixo" />
-                    </button>
-                  </li>
-                );
-              })} */
-                getAlitivades.map((t) => {
+              {getAlitivades.map((t) => {
                   return (
                     <li id={`${t.codigo}`} key={`_${t.atividade}_${t.id}`}>
                       {' '}
@@ -154,9 +159,10 @@ function Conta() {
                         <img src={lixo} alt="Lixo" />
                       </button>
                     </li>
-                  );
+                  )
                 })
-              }
+                }
+                {/* { getAtividade()} */}
             </ul>
           </div>
         </div>
