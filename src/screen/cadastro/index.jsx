@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
-import imgLogo from '../../img/violao.png';
 import mostrarSenha from '../../img/padlock_open_icon_237099.png';
 import ocultarSenha from '../../img/padlock_icon_237100.png';
+import Title from '../../componentes/title';
+import api from '../../services/api';
 
 import Swal from 'sweetalert2';
 
 function Cadastro() {
+  useEffect(() => {
+    if (localStorage.getItem('User')) {
+      window.location.href = '/home';
+    }
+  });
+  // --------------------------------- Constantes --------------------------------- //
+
   const [User, setUser] = useState('');
   const [Email, setEmail] = useState('');
   const [Senha, setSenha] = useState('');
@@ -15,6 +23,8 @@ function Cadastro() {
   const [AparecerSenha, setAparecerSenha] = useState('password');
   const [AparecerConfirmarSenha, setAparecerConfirmarSenha] =
     useState('password');
+
+  // --------------------------------- Funçoes senhas --------------------------------- //
 
   function MostrarSenha(e) {
     e.preventDefault();
@@ -29,14 +39,25 @@ function Cadastro() {
       : setAparecerConfirmarSenha('password');
   }
 
-  function entrar(e) {
+  // --------------------------------- Funçoes cadastrar --------------------------------- //
+
+  async function entrar(e) {
     e.preventDefault();
+    var emailRegex = /[a-z0-9]+@[a-z0-9]+\.[a-z0-9]+/;
     if (User === '' || Email === '' || Senha === '' || ConfirmarSenha === '') {
       setError(true);
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'Preencha todos os campos',
+      });
+    } else if (!emailRegex.test(Email)) {
+      console.log(Email);
+      setError(true);
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Preencha o email corretamente',
       });
     } else if (Senha.length < 5 || Senha.length > 10) {
       setError(true);
@@ -53,32 +74,59 @@ function Cadastro() {
         text: 'Senhas diferentes',
       });
     } else {
-      setError(false);
-      Swal.fire({
-        icon: 'success',
-        title: 'Sucesso',
-        text: 'Bem vindo ao StartSom',
-      });
-      console.log('Usuario:', User);
-      console.log('Senha:', Email);
-      console.log('Usuario:', Senha);
-      console.log('Senha:', ConfirmarSenha);
+      try {
+        await api
+          .post('cadastro', {
+            usuario: User,
+            email: Email,
+            senha: Senha,
+          })
+          .then((res) => {
+            console.log(res.data);
+            setError(false);
+            Swal.fire({
+              icon: 'success',
+              title: 'Sucesso',
+              text: 'Cadastrado com sucesso',
+            }).then((resp) => {
+              setTimeout(() => {
+                window.location.href = '/';
+              }, 500);
+            });
+          });
+      } catch (error) {
+        console.log(error.response.status);
+        const status = error.response.status;
+        if (status === 400) {
+          console.log('Email ja cadastrado');
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Email ja cadastrado',
+          });
+        } else if (status === 422) {
+          console.log('Verifique se os dados estao preenchido corretamente');
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Verifique se os dados estao preenchido corretamente',
+          });
+        }
+      }
     }
   }
 
+  // --------------------------------- Dsigner Tela --------------------------------- //
+
   return (
     <>
+    <div id="body">
       <div id="main">
         <div id="imgLogo">
-          <div id="MainLogo">
-            <img id="imgViolao" src={imgLogo} alt="ViolaoLogo" />
-            <h1>StartSom</h1>
-            <hr />
-          </div>
+          <Title />
         </div>
         <form id="FormLogin">
           <h1>Cadastrar</h1>
-          <hr />
           <br />
           <input
             type="text"
@@ -92,7 +140,7 @@ function Cadastro() {
           <br />
           <input
             type="email"
-            name="User"
+            name="Email"
             id={Error === false ? 'Email' : 'EmailError'}
             placeholder="Email"
             onChange={(e) => {
@@ -156,6 +204,7 @@ function Cadastro() {
             <a href="/">Ja tenho cadastro!!</a>
           </h5>
         </form>
+      </div>
       </div>
     </>
   );

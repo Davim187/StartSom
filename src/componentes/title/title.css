@@ -1,0 +1,28 @@
+#MainLogo {
+  background-color: #a33e0fd9;
+  width: 300px;
+  height: 300px;
+  /* min-height: 30%; */
+  border-radius: 50%;
+  text-align: center;
+}
+#imgViolao {
+  width: 60%;
+}
+
+#logoImg h1 {
+  font-size: 7vh;
+  color: aliceblue;
+}
+#logoImg hr {
+  width: 60%;
+  margin-left: 6%;
+}
+#logoImg {
+  width: 300px;
+}
+@media screen and (max-width: 785px) {
+  #MainLogo {
+    display: none;
+  }
+}

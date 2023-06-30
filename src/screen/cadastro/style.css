@@ -1,40 +1,28 @@
+/*  --------------------------------- Login ---------------------------------  */
+
 * {
   padding: 0;
   margin: 0;
 }
+
+/*  --------------------------------- Parte Imagem ---------------------------------  */
+
 #main {
   display: flex;
-  flex-direction: row;
-}
-#MainLogo {
-  background-color: #a33e0fd9;
-  width: 300px;
-  height: 300px;
-  /* min-height: 30%; */
-  border-radius: 50%;
-  text-align: center;
-}
-#imgViolao {
-  width: 60%;
-}
-
-#imgLogo h1 {
-  font-size: 7vh;
-  color: aliceblue;
-}
-#imgLogo hr {
-  width: 60%;
-  margin-left: 18%;
+  align-items: center;
+  justify-content: center;
 }
 #imgLogo {
   background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
-    url(../../img/R.jfif) no-repeat fixed;
+    url(../../img/recomendados/R.jfif) no-repeat fixed;
   height: 100vh;
-  width: 70%;
+  width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
+/*  --------------------------------- Parte do formulario ---------------------------------  */
+
 #FormLogin {
   height: 100vh;
   width: 30vw;
@@ -42,6 +30,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #fff;
 }
 #User {
   height: 30px;
@@ -74,7 +63,6 @@
 }
 .StatusSenha {
   width: 24px;
-  height: 23px;
   position: relative;
   left: 90px;
   top: 27px;
@@ -126,4 +114,33 @@
   outline: none;
   border: none;
   border-bottom: 1px solid red;
+}
+@media screen and (max-width: 785px) {
+  #body {
+    background: linear-gradient(#a33e0f65 100%, #db77134f 20%),
+      url(../../img/recomendados/R.jfif) no-repeat fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+  }
+  #imgLogo {
+    display: none;
+  }
+  #FormLogin {
+    background-color: #fff;
+    height: 60vh;
+    width: 70%;
+    border-radius: 3%;
+  }
+  #main {
+    height: 100vh;
+    width: 100vw;
+  }
+  .StatusSenha {
+    top: 23px;
+  }
+  .StatusConfirmarSenha {
+    top: 23px;
+  }
 }
