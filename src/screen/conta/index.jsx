@@ -16,19 +16,13 @@ function Conta() {
   );
   const [User, setUser] = useState(JSON.parse(localStorage.getItem('User')));
   var id;
+  var AttAtividades;
   useEffect(() => {
     if (!localStorage.getItem('User')) {
       window.location.href = '/';
     }
-    const atualizar = localStorage.getItem('TarefaUse');
-    setLista(JSON.parse(atualizar));
   }, []);
 
-  // setTimeout(() => {
-  //   console.log(lista);
-  //   localStorage.setItem('TarefaUse', JSON.stringify(lista));
-  // }, 500)
-   
   function SairUserLogin() {
     localStorage.removeItem('Token');
     localStorage.removeItem('User');
@@ -59,32 +53,33 @@ function Conta() {
           })
           .then((res) => {
             console.log(res.data);
-            setInputTarefas('')
+            setInputTarefas('');
             Swal.fire({
               title: 'Aguarde',
               text: 'Cadastrando tarefa',
               timer: 2000,
               didOpen: () => {
-                  Swal.showLoading()
-                }
-            })
-            
-           .then(async ()=>{
+                Swal.showLoading();
+              },
+            }).then(async () => {
               Swal.fire({
                 icon: 'success',
                 title: 'Sucesso',
                 text: 'Tarefa ja cadastrada',
-              }).then(() =>{window.location.reload()})
+              }).then(() => {
+                window.location.reload();
+              });
               await api.get(`/pegarAtividade/${User.id}`).then((res) => {
                 console.log(res.data.tarefas);
-                localStorage.setItem('TarefaUse', JSON.stringify(res.data.tarefas));
+                localStorage.setItem(
+                  'TarefaUse',
+                  JSON.stringify(res.data.tarefas)
+                );
                 console.log(getAlitivades);
-                setLista(getAlitivades);
-              })
-              
-            })})
-      }
-             catch (error) {
+              });
+            });
+          });
+      } catch (error) {
         const status = error.response.status;
         if (status === 401) {
           Swal.fire({
@@ -96,22 +91,41 @@ function Conta() {
       }
     }
   };
-  const remove = async (codigo, e) => {
+  const remove = async (codigo) => {
     await api
       .patch(`/deletAtividade/${codigo}`, {
         status: 2,
       })
-      .then(async (res) => {
-        await api.get(`/pegarAtividade/${User.id}`).then((res) => {
-          console.log(res.data.tarefas);
-          localStorage.setItem('TarefaUse', JSON.stringify(res.data.tarefas));
-          console.log(getAlitivades);
-          setLista(getAlitivades);
-        })
-        window.location.reload()
+      .then(async () => {
+        await api
+          .get(`/pegarAtividade/${User.id}`)
+          .then((res) => {
+            localStorage.setItem('TarefaUse', JSON.stringify(res.data.tarefas));
+            console.log(res.data.tarefas);
+            console.log(getAlitivades);
+          })
+          .then(() => {
+            Swal.fire({
+              title: 'Aguarde',
+              text: 'Deletando tarefa',
+              timer: 3300,
+              didOpen: () => {
+                Swal.showLoading();
+              },
+            }).then(async () => {
+              Swal.fire({
+                icon: 'success',
+                title: 'Sucesso',
+                text: 'Tarefa deletada',
+              }).then(() => {
+                setTimeout(() => {
+                  window.location.reload();
+                }, 500);
+              });
+            });
+          });
       });
   };
-
   return (
     <>
       <Header />
@@ -151,18 +165,17 @@ function Conta() {
             </button>
             <ul id="list" style={{ listStyle: 'none' }}>
               {getAlitivades.map((t) => {
-                  return (
-                    <li id={`${t.codigo}`} key={`_${t.atividade}_${t.id}`}>
-                      {' '}
-                      {t.atividade}
-                      <button id="deletar" onClick={() => remove(t.codigo)}>
-                        <img src={lixo} alt="Lixo" />
-                      </button>
-                    </li>
-                  )
-                })
-                }
-                {/* { getAtividade()} */}
+                return (
+                  <li id={`${t.codigo}`} key={`_${t.atividade}_${t.id}`}>
+                    {' '}
+                    {t.atividade}
+                    <button id="deletar" onClick={() => remove(t.codigo)}>
+                      <img src={lixo} alt="Lixo" />
+                    </button>
+                  </li>
+                );
+              })}
+              {/* { getAtividade()} */}
             </ul>
           </div>
         </div>
