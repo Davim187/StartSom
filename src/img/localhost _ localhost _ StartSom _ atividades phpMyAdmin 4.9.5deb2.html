@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html dir="ltr" data-lt-installed="true" lang="pt"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="http://localhost/phpmyadmin/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="http://localhost/phpmyadmin/favicon.ico" type="image/x-icon"><link rel="stylesheet" type="text/css" href="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/jquery-ui.css"><link rel="stylesheet" type="text/css" href="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/codemirror.css"><link rel="stylesheet" type="text/css" href="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/show-hint.css"><link rel="stylesheet" type="text/css" href="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/lint.css"><link rel="stylesheet" type="text/css" href="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/phpmyadmin.css.css"><link rel="stylesheet" type="text/css" href="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/printview.css" media="print" id="printcss"><title>localhost / localhost / StartSom / atividades | phpMyAdmin 4.9.5deb2</title><script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/jquery.min.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/jquery-migrate.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/whitelist.php"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/sprintf.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/ajax.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/keyhandler.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/jquery-ui.min.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/js.cookie.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/jquery.mousewheel.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/jquery.event.drag-2.2.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/jquery.validate.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/jquery-ui-timepicker-addon.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/jquery.ba-hashchange-1.3.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/jquery.debounce-1.0.5.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/menu-resizer.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/cross_framing_protection.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/rte.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/tracekit.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/error_report.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/messages.php"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/config.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/doclinks.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/functions.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/navigation.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/indexes.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/common.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/page_settings.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/shortcuts_handler.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/tbl_structure.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/jquery.uitablefilter.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/codemirror.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/sql.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/runmode.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/show-hint.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/sql-hint.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/lint.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/sql-lint.js"></script>
+<script data-cfasync="false" type="text/javascript" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/console.js"></script>
+<script data-cfasync="false" type="text/javascript">// <![CDATA[
+PMA_commonParams.setAll({common_query:"",opendb_url:"db_structure.php",lang:"pt",server:"1",table:"atividades",db:"StartSom",token:"2a35717f33347827257b7c642a626437",text_dir:"ltr",show_databases_navigation_as_tree:true,pma_text_default_tab:"Procurar",pma_text_left_default_tab:"Estrutura",pma_text_left_default_tab2:false,LimitChars:"50",pftext:"P",confirm:true,LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:true,is_https:false,rootPath:"/phpmyadmin/",arg_separator:"&",PMA_VERSION:"4.9.5deb2",auth_type:"cookie",user:"root"});
+ConsoleEnterExecutes=false
+AJAX.scriptHandler.add("vendor/jquery/jquery.min.js",0).add("vendor/jquery/jquery-migrate.js",0).add("whitelist.php",1).add("vendor/sprintf.js",1).add("ajax.js",0).add("keyhandler.js",1).add("vendor/jquery/jquery-ui.min.js",0).add("vendor/js.cookie.js",1).add("vendor/jquery/jquery.mousewheel.js",0).add("vendor/jquery/jquery.event.drag-2.2.js",0).add("vendor/jquery/jquery.validate.js",0).add("vendor/jquery/jquery-ui-timepicker-addon.js",0).add("vendor/jquery/jquery.ba-hashchange-1.3.js",0).add("vendor/jquery/jquery.debounce-1.0.5.js",0).add("menu-resizer.js",1).add("cross_framing_protection.js",0).add("rte.js",1).add("vendor/tracekit.js",1).add("error_report.js",1).add("messages.php",0).add("config.js",1).add("doclinks.js",1).add("functions.js",1).add("navigation.js",1).add("indexes.js",1).add("common.js",1).add("page_settings.js",1).add("shortcuts_handler.js",1).add("tbl_structure.js",1).add("vendor/jquery/jquery.uitablefilter.js",0).add("vendor/codemirror/lib/codemirror.js",0).add("vendor/codemirror/mode/sql/sql.js",0).add("vendor/codemirror/addon/runmode/runmode.js",0).add("vendor/codemirror/addon/hint/show-hint.js",0).add("vendor/codemirror/addon/hint/sql-hint.js",0).add("vendor/codemirror/addon/lint/lint.js",0).add("codemirror/addon/lint/sql-lint.js",0).add("console.js",1);
+$(function() {AJAX.fireOnload("whitelist.php");AJAX.fireOnload("vendor/sprintf.js");AJAX.fireOnload("keyhandler.js");AJAX.fireOnload("vendor/js.cookie.js");AJAX.fireOnload("menu-resizer.js");AJAX.fireOnload("rte.js");AJAX.fireOnload("vendor/tracekit.js");AJAX.fireOnload("error_report.js");AJAX.fireOnload("config.js");AJAX.fireOnload("doclinks.js");AJAX.fireOnload("functions.js");AJAX.fireOnload("navigation.js");AJAX.fireOnload("indexes.js");AJAX.fireOnload("common.js");AJAX.fireOnload("page_settings.js");AJAX.fireOnload("shortcuts_handler.js");AJAX.fireOnload("tbl_structure.js");AJAX.fireOnload("console.js");});
+// ]]></script><noscript><style>html{display:block}</style></noscript></head><body style="margin-left: 240px; margin-bottom: 19.2333px; padding-top: 58.6px;"><div id="pma_navigation" style="width: 240px;"><div id="pma_navigation_resizer" style="left: 240px; width: 3px;"></div><div id="pma_navigation_collapser" style="left: 240px;" title="Esconder painel">←</div><div id="pma_navigation_content"><div id="pma_navigation_header"><a class="hide navigation_url" href="http://localhost/phpmyadmin/navigation.php?ajax_request=1"></a>    <div id="pmalogo">
+                    <a href="http://localhost/phpmyadmin/index.php">
+                <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/logo_left.png" alt="phpMyAdmin" id="imgpmalogo">
+                    </a>
+            </div>
+<!-- LINKS START --><div id="navipanellinks"><a href="http://localhost/phpmyadmin/index.php" title="Início"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Início" alt="Início" class="icon ic_b_home"></a><a href="http://localhost/phpmyadmin/logout.php" class="logout disableAjax" title="Sair"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Sair" alt="Sair" class="icon ic_s_loggoff"></a><a href="http://localhost/phpmyadmin/doc/html/index.html" target="documentation" title="Documentação do phpMyAdmin"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação do phpMyAdmin" alt="Documentação do phpMyAdmin" class="icon ic_b_docs"></a><a href="http://localhost/phpmyadmin/url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Findex.html" target="mysql_doc" title="Documentação"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_sqlhelp"></a><a href="#" id="pma_navigation_settings_icon" title="Configurações do painel de navegação"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Configurações do painel de navegação" alt="Configurações do painel de navegação" class="icon ic_s_cog"></a><a href="#" id="pma_navigation_reload" title="Recarregar painel de navegação"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Recarregar painel de navegação" alt="Recarregar painel de navegação" class="icon ic_s_reload"></a></div><!-- LINKS ENDS --><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Carregando…" alt="Carregando…" style="visibility: hidden; display:none" class="icon ic_ajax_clock_small throbber"></div><div id="pma_navigation_tree" class="list_container synced highlight" style="height: 595.267px;"><div class="pma_quick_warp"><div class="drop_list"><span title="Tabelas recentes" class="drop_button">Recente</span><ul id="pma_recent_list"><li class="warp_link"><a href="http://localhost/phpmyadmin/tbl_recent_favorite.php?db=StartSom&amp;table=atividades">`StartSom`.`atividades`</a></li><li class="warp_link"><a href="http://localhost/phpmyadmin/tbl_recent_favorite.php?db=StartSom&amp;table=SequelizeMeta">`StartSom`.`SequelizeMeta`</a></li><li class="warp_link"><a href="http://localhost/phpmyadmin/tbl_recent_favorite.php?db=StartSom&amp;table=usuarios">`StartSom`.`usuarios`</a></li><li class="warp_link"><a href="http://localhost/phpmyadmin/tbl_recent_favorite.php?db=StartSom&amp;table=Usuario">`StartSom`.`Usuario`</a></li><li class="warp_link"><a href="http://localhost/phpmyadmin/tbl_recent_favorite.php?db=ActionMusic&amp;table=generosMusicais">`ActionMusic`.`generosMusicais`</a></li><li class="warp_link"><a href="http://localhost/phpmyadmin/tbl_recent_favorite.php?db=ActionMusic&amp;table=usuarios">`ActionMusic`.`usuarios`</a></li><li class="warp_link"><a href="http://localhost/phpmyadmin/tbl_recent_favorite.php?db=ActionMusic&amp;table=SequelizeMeta">`ActionMusic`.`SequelizeMeta`</a></li><li class="warp_link"><a href="http://localhost/phpmyadmin/tbl_recent_favorite.php?db=actionmusic&amp;table=usuarios">`actionmusic`.`usuarios`</a></li></ul></div><div class="drop_list"><span title="Tabelas Favoritas" class="drop_button">Favoritos</span><ul id="pma_favorite_list"><li class="warp_link">Não existem tabelas favoritas.</li></ul></div><div class="clearfloat"></div></div><div class="clearfloat"></div><ul><!-- CONTROLS START --><li id="navigation_controls_outer"><div id="navigation_controls"><a href="#" id="pma_navigation_collapse" title="Reduzir tudo"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Reduzir tudo" alt="Reduzir tudo" class="icon ic_s_collapseall"></a><a href="#" id="pma_navigation_sync" title="Desconectar do painel principal"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Desconectar do painel principal" alt="Desconectar do painel principal" class="icon ic_s_link"></a></div></li><!-- CONTROLS ENDS --></ul><div id="pma_navigation_tree_content" style="height: 548.267px;"><ul><li class="first new_database italics"><div class="block"><i class="first"></i></div><div class="block "><a href="http://localhost/phpmyadmin/server_databases.php?server=1"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_b_newdb"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/server_databases.php?server=1" title="">Novo</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="#"><span class="hide aPath">cm9vdA==.QWN0aW9uTXVzaWM=</span><span class="hide vPath">cm9vdA==.QWN0aW9uTXVzaWM=</span><span class="hide pos">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Expandir/Recolher" alt="Expandir/Recolher" class="icon ic_b_plus"></a></div><div class="block "><a href="http://localhost/phpmyadmin/db_operations.php?server=1&amp;db=ActionMusic&amp;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Operações com banco de dados" alt="Operações com banco de dados" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/db_structure.php?server=1&amp;db=ActionMusic" title="Estrutura">ActionMusic</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="#"><span class="hide aPath">cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class="hide vPath">cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class="hide pos">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Expandir/Recolher" alt="Expandir/Recolher" class="icon ic_b_plus"></a></div><div class="block "><a href="http://localhost/phpmyadmin/db_operations.php?server=1&amp;db=information_schema&amp;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Operações com banco de dados" alt="Operações com banco de dados" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/db_structure.php?server=1&amp;db=information_schema" title="Estrutura">information_schema</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="#"><span class="hide aPath">cm9vdA==.bXlzcWw=</span><span class="hide vPath">cm9vdA==.bXlzcWw=</span><span class="hide pos">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Expandir/Recolher" alt="Expandir/Recolher" class="icon ic_b_plus"></a></div><div class="block "><a href="http://localhost/phpmyadmin/db_operations.php?server=1&amp;db=mysql&amp;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Operações com banco de dados" alt="Operações com banco de dados" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/db_structure.php?server=1&amp;db=mysql" title="Estrutura">mysql</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="#"><span class="hide aPath">cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h</span><span class="hide vPath">cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h</span><span class="hide pos">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Expandir/Recolher" alt="Expandir/Recolher" class="icon ic_b_plus"></a></div><div class="block "><a href="http://localhost/phpmyadmin/db_operations.php?server=1&amp;db=performance_schema&amp;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Operações com banco de dados" alt="Operações com banco de dados" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/db_structure.php?server=1&amp;db=performance_schema" title="Estrutura">performance_schema</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="#"><span class="hide aPath">cm9vdA==.cGhwbXlhZG1pbg==</span><span class="hide vPath">cm9vdA==.cGhwbXlhZG1pbg==</span><span class="hide pos">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Expandir/Recolher" alt="Expandir/Recolher" class="icon ic_b_plus"></a></div><div class="block "><a href="http://localhost/phpmyadmin/db_operations.php?server=1&amp;db=phpmyadmin&amp;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Operações com banco de dados" alt="Operações com banco de dados" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/db_structure.php?server=1&amp;db=phpmyadmin" title="Estrutura">phpmyadmin</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander loaded" href="#"><span class="hide aPath">cm9vdA==.U3RhcnRTb20=</span><span class="hide vPath">cm9vdA==.U3RhcnRTb20=</span><span class="hide pos">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_b_minus"></a></div><div class="block "><a href="http://localhost/phpmyadmin/db_operations.php?server=1&amp;db=StartSom&amp;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Operações com banco de dados" alt="Operações com banco de dados" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/db_structure.php?server=1&amp;db=StartSom" title="Estrutura">StartSom</a><div class="clearfloat"></div><div class="list_container"><ul><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><li class="new_table italics new_table italics"><div class="block"><i></i><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span></div><div class="block "><a href="http://localhost/phpmyadmin/tbl_create.php?server=1&amp;db=StartSom"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Nova" alt="Nova" class="icon ic_b_table_add"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/tbl_create.php?server=1&amp;db=StartSom" title="">Nova</a><div class="clearfloat"></div></li><li class="table table selected"><div class="block"><i></i><b></b><a class="expander loaded" href="#"><span class="hide aPath">cm9vdA==.U3RhcnRTb20=.dGFibGVz.YXRpdmlkYWRlcw==</span><span class="hide vPath">cm9vdA==.U3RhcnRTb20=.VGFiZWxhcw==.YXRpdmlkYWRlcw==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_b_minus"></a></div><div class="block "><a href="http://localhost/phpmyadmin/tbl_structure.php?server=1&amp;db=StartSom&amp;table=atividades"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Estrutura" alt="Estrutura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/sql.php?server=1&amp;db=StartSom&amp;table=atividades&amp;pos=0" title="Procurar">atividades</a><span class="navItemControls"><a href="http://localhost/phpmyadmin/navigation.php" data-post="hideNavItem=1&amp;itemType=table&amp;itemName=atividades&amp;dbName=StartSom" class="hideNavItem ajax"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Esconder" alt="Esconder" class="icon ic_hide"></a></span><div class="clearfloat"></div><div class="list_container"><ul><li class=""><div class="block"><i></i><b></b><a class="expander container" href="#"><span class="hide aPath">cm9vdA==.U3RhcnRTb20=.dGFibGVz.YXRpdmlkYWRlcw==.Y29sdW1ucw==</span><span class="hide vPath">cm9vdA==.U3RhcnRTb20=.VGFiZWxhcw==.YXRpdmlkYWRlcw==.Q29sdW5hcw==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><span class="hide pos3_name">columns</span><span class="hide pos3_value">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Expandir/Recolher" alt="Expandir/Recolher" class="icon ic_b_plus"></a></div><i><div class="block "><a href="http://localhost/phpmyadmin/tbl_structure.php?server=1&amp;db=StartSom&amp;table=atividades"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Colunas" alt="Colunas" class="icon ic_pause"></a></div>&nbsp;<a class="hover_show_full" href="http://localhost/phpmyadmin/tbl_structure.php?server=1&amp;db=StartSom&amp;table=atividades">Colunas</a></i><div class="clearfloat"></div><div style="display: none;" class="list_container"><ul><li class="new_column italics last new_column italics"><div class="block"><i></i><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><span class="hide pos3_name">columns</span><span class="hide pos3_value">0</span></div><div class="block "><a href="http://localhost/phpmyadmin/tbl_addfield.php?server=1&amp;db=StartSom&amp;table=atividades&amp;field_where=last&amp;after_field="><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Nova" alt="Nova" class="icon ic_b_column_add"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/tbl_addfield.php?server=1&amp;db=StartSom&amp;table=atividades&amp;field_where=last&amp;after_field=" title="">Nova</a><div class="clearfloat"></div></li></ul></div></li><li class="last"><div class="block"><i></i><a class="expander container" href="#"><span class="hide aPath">cm9vdA==.U3RhcnRTb20=.dGFibGVz.YXRpdmlkYWRlcw==.aW5kZXhlcw==</span><span class="hide vPath">cm9vdA==.U3RhcnRTb20=.VGFiZWxhcw==.YXRpdmlkYWRlcw==.w41uZGljZXM=</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><span class="hide pos3_name">indexes</span><span class="hide pos3_value">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Expandir/Recolher" alt="Expandir/Recolher" class="icon ic_b_plus"></a></div><i><div class="block "><a href="http://localhost/phpmyadmin/tbl_structure.php?server=1&amp;db=StartSom&amp;table=atividades"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Índices" alt="Índices" class="icon ic_b_index"></a></div>&nbsp;<a class="hover_show_full" href="http://localhost/phpmyadmin/tbl_structure.php?server=1&amp;db=StartSom&amp;table=atividades">Índices</a></i><div class="clearfloat"></div><div style="display: none;" class="list_container"><ul><li class="new_index italics last new_index italics"><div class="block"><i></i><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><span class="hide pos3_name">indexes</span><span class="hide pos3_value">0</span></div><div class="block "><a class=" ajax" href="http://localhost/phpmyadmin/tbl_indexes.php?server=1&amp;create_index=1&amp;added_fields=2&amp;db=StartSom&amp;table=atividades"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Novo" alt="Novo" class="icon ic_b_index_add"></a></div><a class="hover_show_full ajax" href="http://localhost/phpmyadmin/tbl_indexes.php?server=1&amp;create_index=1&amp;added_fields=2&amp;db=StartSom&amp;table=atividades" title="">Novo</a><div class="clearfloat"></div></li></ul></div></li></ul></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="#"><span class="hide aPath">cm9vdA==.U3RhcnRTb20=.dGFibGVz.U2VxdWVsaXplTWV0YQ==</span><span class="hide vPath">cm9vdA==.U3RhcnRTb20=.VGFiZWxhcw==.U2VxdWVsaXplTWV0YQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Expandir/Recolher" alt="Expandir/Recolher" class="icon ic_b_plus"></a></div><div class="block "><a href="http://localhost/phpmyadmin/tbl_structure.php?server=1&amp;db=StartSom&amp;table=SequelizeMeta"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Estrutura" alt="Estrutura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/sql.php?server=1&amp;db=StartSom&amp;table=SequelizeMeta&amp;pos=0" title="Procurar">SequelizeMeta</a><span class="navItemControls"><a href="http://localhost/phpmyadmin/navigation.php" data-post="hideNavItem=1&amp;itemType=table&amp;itemName=SequelizeMeta&amp;dbName=StartSom" class="hideNavItem ajax"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Esconder" alt="Esconder" class="icon ic_hide"></a></span><div class="clearfloat"></div></li><li class="table last table"><div class="block"><i></i><a class="expander" href="#"><span class="hide aPath">cm9vdA==.U3RhcnRTb20=.dGFibGVz.dXN1YXJpb3M=</span><span class="hide vPath">cm9vdA==.U3RhcnRTb20=.VGFiZWxhcw==.dXN1YXJpb3M=</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Expandir/Recolher" alt="Expandir/Recolher" class="icon ic_b_plus"></a></div><div class="block "><a href="http://localhost/phpmyadmin/tbl_structure.php?server=1&amp;db=StartSom&amp;table=usuarios"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Estrutura" alt="Estrutura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/sql.php?server=1&amp;db=StartSom&amp;table=usuarios&amp;pos=0" title="Procurar">usuarios</a><span class="navItemControls"><a href="http://localhost/phpmyadmin/navigation.php" data-post="hideNavItem=1&amp;itemType=table&amp;itemName=usuarios&amp;dbName=StartSom" class="hideNavItem ajax"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Esconder" alt="Esconder" class="icon ic_hide"></a></span><div class="clearfloat"></div></li></ul></div></li><li class="last database"><div class="block"><i></i><a class="expander" href="#"><span class="hide aPath">cm9vdA==.c3lz</span><span class="hide vPath">cm9vdA==.c3lz</span><span class="hide pos">0</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Expandir/Recolher" alt="Expandir/Recolher" class="icon ic_b_plus"></a></div><div class="block "><a href="http://localhost/phpmyadmin/db_operations.php?server=1&amp;db=sys&amp;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Operações com banco de dados" alt="Operações com banco de dados" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/db_structure.php?server=1&amp;db=sys" title="Estrutura">sys</a><div class="clearfloat"></div></li></ul></div></div><div id="pma_navi_settings_container"><div id="pma_navigation_settings"><div class="page_settings"><form method="post" action="tbl_structure.php?db=StartSom&amp;table=atividades&amp;server=1&amp;target=" class="config-form disableAjax"><input type="hidden" name="tab_hash" value=""><input type="hidden" name="token" value="2a35717f33347827257b7c642a626437">
+<input type="hidden" name="submit_save" value="Navi"><input type="hidden" name="token" value="2a35717f33347827257b7c642a626437"><ul class="tabs responsivetable">
+
+                                    <li class="active">
+
+            <a href="#Navi_panel">
+            Painel de navegação
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_tree">
+            Árvore de navegação
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_servers">
+            Servidores
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_databases">
+            Base de Dados
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_tables">
+            Tabelas
+            </a>
+        </li>
+            </ul>
+<br><div class="tabs_contents"><fieldset class="optbox" id="Navi_panel" style="">
+<legend>Painel de navegação</legend>
+    <p>Personalizar a aparência do painel de navegação.</p>
+<table width="100%" cellspacing="0">
+<tbody><tr><th><label for="ShowDatabasesNavigationAsTree">Mostra navegação de bases de dados como árvore</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_ShowDatabasesNavigationAsTree" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>No painel de navegação, substitui a árvore da base de dados por um seletor</small></th><td><span class="checkbox"><input type="checkbox" name="ShowDatabasesNavigationAsTree" id="ShowDatabasesNavigationAsTree" checked="checked"></span><a class="restore-default hide" href="#ShowDatabasesNavigationAsTree" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationLinkWithMainPanel">Conectar com o painel principal</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationLinkWithMainPanel" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Liga com o painel principal destacando a base de dados ou tabela actual.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationLinkWithMainPanel" id="NavigationLinkWithMainPanel" checked="checked"></span><a class="restore-default hide" href="#NavigationLinkWithMainPanel" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationDisplayLogo">Mostrar logotipo</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationDisplayLogo" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Mostrar o logótipo no painel de navegação.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationDisplayLogo" id="NavigationDisplayLogo" checked="checked"></span><a class="restore-default hide" href="#NavigationDisplayLogo" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationLogoLink">URL do link do logotipo</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationLogoLink" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>URL para onde irá apontar o logótipo do painel de navegação.</small></th><td><input type="text" class="all85" name="NavigationLogoLink" id="NavigationLogoLink" value="index.php"><a class="restore-default hide" href="#NavigationLogoLink" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationLogoLinkWindow">Destino da ligação do logótipo</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationLogoLinkWindow" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Abre a página ligada na janela principal (<kbd>principal</kbd>) ou numa nova janela (<kbd>nova</kbd>).</small></th><td><select class="all85" name="NavigationLogoLinkWindow" id="NavigationLogoLinkWindow"><option value="main" selected="selected">main</option><option value="new">new</option></select><a class="restore-default hide" href="#NavigationLogoLinkWindow" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreePointerEnable">Ativar destaque</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreePointerEnable" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Destaque servidor sob o cursor do rato.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreePointerEnable" id="NavigationTreePointerEnable" checked="checked"></span><a class="restore-default hide" href="#NavigationTreePointerEnable" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="FirstLevelNavigationItems">Máximo de itens no primeiro nível</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_FirstLevelNavigationItems" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>A quantidade de itens que podem ser mostrados em cada página no primeiro nível da árvore de navegação.</small></th><td><input type="number" name="FirstLevelNavigationItems" id="FirstLevelNavigationItems" value="100"><a class="restore-default hide" href="#FirstLevelNavigationItems" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeDisplayItemFilterMinimum">Número mínimo de itens a apresentar na caixa de filtragem</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDisplayItemFilterMinimum" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Define a quantidade mínima de itens (tabelas, vistas, rotinas e eventos) a apresentar numa caixa de filtragem.</small></th><td><input type="number" name="NavigationTreeDisplayItemFilterMinimum" id="NavigationTreeDisplayItemFilterMinimum" value="30"><a class="restore-default hide" href="#NavigationTreeDisplayItemFilterMinimum" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NumRecentTables">Tabelas utilizadas recentemente</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NumRecentTables" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Número máximo de tabelas utilizadas recentemente, definir 0 para desativar.</small></th><td><input type="number" name="NumRecentTables" id="NumRecentTables" value="10"><a class="restore-default hide" href="#NumRecentTables" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NumFavoriteTables">Tabelas Favoritas</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NumFavoriteTables" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Número máximo de tabelas favoritas, definir 0 para desativar.</small></th><td><input type="number" name="NumFavoriteTables" id="NumFavoriteTables" value="10"><a class="restore-default hide" href="#NumFavoriteTables" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationWidth">Largura do painel de navegação</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationWidth" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Configurar como 0 para colapsar o painel de navegação.</small></th><td><input type="number" name="NavigationWidth" id="NavigationWidth" value="240"><a class="restore-default hide" href="#NavigationWidth" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_tree" style="display: none;">
+<legend>Árvore de navegação</legend>
+    <p>Personalizar a árvore de navegação.</p>
+<table width="100%" cellspacing="0">
+<tbody><tr><th><label for="MaxNavigationItems">Máximo de itens por ramo</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_MaxNavigationItems" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>A quantidade de itens que podem ser mostradas em cada página da árvore de navegação.</small></th><td><input type="number" name="MaxNavigationItems" id="MaxNavigationItems" value="50"><a class="restore-default hide" href="#MaxNavigationItems" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeEnableGrouping">Agrupar itens na árvore</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeEnableGrouping" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Agrupa itens na árvore de navegação (determinado pelo divisor definido nas abas Banco de Dados e Tabelas acima).</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeEnableGrouping" id="NavigationTreeEnableGrouping" checked="checked"></span><a class="restore-default hide" href="#NavigationTreeEnableGrouping" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeEnableExpansion">Ativar a expansão da árvore de navegação</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeEnableExpansion" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Se deseja oferecer a possibilidade de expansão de árvore no painel de navegação.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeEnableExpansion" id="NavigationTreeEnableExpansion" checked="checked"></span><a class="restore-default hide" href="#NavigationTreeEnableExpansion" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowTables">Mostrar tabelas na árvore</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowTables" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Se deseja mostrar tabelas em banco de dados na árvore no painel de navegação</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowTables" id="NavigationTreeShowTables" checked="checked"></span><a class="restore-default hide" href="#NavigationTreeShowTables" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowViews">Mostrar visualizações em árvore</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowViews" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Se deseja mostrar visualisações em banco de dados na árvore no painel de navegação</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowViews" id="NavigationTreeShowViews" checked="checked"></span><a class="restore-default hide" href="#NavigationTreeShowViews" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowFunctions">Mostrar funções em árvore</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowFunctions" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Se para mostrar funções abaixo da base de dados na árvore de navegação</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowFunctions" id="NavigationTreeShowFunctions" checked="checked"></span><a class="restore-default hide" href="#NavigationTreeShowFunctions" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowProcedures">Mostrar os procedimentos em árvore</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowProcedures" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Se para mostrar procedimentos abaixo da base de dados na árvore de navegação</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowProcedures" id="NavigationTreeShowProcedures" checked="checked"></span><a class="restore-default hide" href="#NavigationTreeShowProcedures" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowEvents">Mostrar eventos em árvore</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowEvents" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Se deseja exibir os eventos no banco de dados na árvore de navegação</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowEvents" id="NavigationTreeShowEvents" checked="checked"></span><a class="restore-default hide" href="#NavigationTreeShowEvents" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_servers" style="display: none;">
+<legend>Servidores</legend>
+    <p>Exibir as opções dos servidores.</p>
+<table width="100%" cellspacing="0">
+<tbody><tr><th><label for="NavigationDisplayServers">Mostrar seleção de servidores</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationDisplayServers" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Apresentar o servidor escolhido no topo do painel de navegação.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationDisplayServers" id="NavigationDisplayServers" checked="checked"></span><a class="restore-default hide" href="#NavigationDisplayServers" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="DisplayServersList">Mostrar servidores como uma lista</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DisplayServersList" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Mostrar lista de servidores como uma lista ao invés de um menu drop down.</small></th><td><span class="checkbox"><input type="checkbox" name="DisplayServersList" id="DisplayServersList"></span><a class="restore-default hide" href="#DisplayServersList" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_databases" style="display: none;">
+<legend>Base de Dados</legend>
+    <p>Opções de visualização das Bases de dados.</p>
+<table width="100%" cellspacing="0">
+<tbody><tr><th><label for="NavigationTreeDisplayDbFilterMinimum">Número mínimo de bases de dados para mostrar a caixa de filtragem de base de dados</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDisplayDbFilterMinimum" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span></th><td><input type="number" name="NavigationTreeDisplayDbFilterMinimum" id="NavigationTreeDisplayDbFilterMinimum" value="30"><a class="restore-default hide" href="#NavigationTreeDisplayDbFilterMinimum" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeDbSeparator">Divisor de árvore da base de dados</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDbSeparator" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Cadeia de caracteres que separa bases de dados em diferentes níveis de árvore.</small></th><td><input type="text" size="25" name="NavigationTreeDbSeparator" id="NavigationTreeDbSeparator" value="_"><a class="restore-default hide" href="#NavigationTreeDbSeparator" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_tables" style="display: none;">
+<legend>Tabelas</legend>
+    <p>Opções de exibição de tabelas.</p>
+<table width="100%" cellspacing="0">
+<tbody><tr><th><label for="NavigationTreeDefaultTabTable">Alvo para ícone de acesso rápido</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDefaultTabTable" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span></th><td><select class="all85" name="NavigationTreeDefaultTabTable" id="NavigationTreeDefaultTabTable"><option value="structure" selected="selected">Estrutura</option><option value="sql">SQL</option><option value="search">Pesquisar</option><option value="insert">Insere</option><option value="browse">Procurar</option></select><a class="restore-default hide" href="#NavigationTreeDefaultTabTable" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeDefaultTabTable2">Destino para o segundo ícone de acesso rápido</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDefaultTabTable2" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span></th><td><select class="all85" name="NavigationTreeDefaultTabTable2" id="NavigationTreeDefaultTabTable2"><option value="" selected="selected"></option><option value="structure">Estrutura</option><option value="sql">SQL</option><option value="search">Pesquisar</option><option value="insert">Insere</option><option value="browse">Procurar</option></select><a class="restore-default hide" href="#NavigationTreeDefaultTabTable2" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeTableSeparator">Separador de árvore da tabela</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeTableSeparator" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Cadeia de caracteres que separa tabelas em níveis diferentes de árvores.</small></th><td><input type="text" size="25" name="NavigationTreeTableSeparator" id="NavigationTreeTableSeparator" value="__"><a class="restore-default hide" href="#NavigationTreeTableSeparator" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeTableLevel">Profundidade máxima da árvore da tabela</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeTableLevel" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span></th><td><input type="number" name="NavigationTreeTableLevel" id="NavigationTreeTableLevel" value="1"><a class="restore-default hide" href="#NavigationTreeTableLevel" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table>
+</fieldset>
+</div>
+</form>
+<script type="text/javascript">
+if (typeof configInlineParams === "undefined" || !Array.isArray(configInlineParams)) configInlineParams = [];
+configInlineParams.push(function() {
+validateField('FirstLevelNavigationItems', 'PMA_validatePositiveNumber', true);
+validateField('NavigationTreeDisplayItemFilterMinimum', 'PMA_validatePositiveNumber', true);
+validateField('NumRecentTables', 'PMA_validateNonNegativeNumber', true);
+validateField('NumFavoriteTables', 'PMA_validateNonNegativeNumber', true);
+validateField('NavigationWidth', 'PMA_validateNonNegativeNumber', true);
+validateField('MaxNavigationItems', 'PMA_validatePositiveNumber', true);
+validateField('NavigationTreeTableLevel', 'PMA_validatePositiveNumber', true);
+$.extend(PMA_messages, {
+	'error_nan_p': 'Número não positivo!',
+	'error_nan_nneg': 'Não é um número não-negativo!',
+	'error_incorrect_port': 'Número de porta inválido!',
+	'error_invalid_value': 'Valor incorrecto!',
+	'error_value_lte': 'O valor precisa ser igual ou menor que %s!'});
+$.extend(defaultValues, {
+	'ShowDatabasesNavigationAsTree': true,
+	'NavigationLinkWithMainPanel': true,
+	'NavigationDisplayLogo': true,
+	'NavigationLogoLink': 'index.php',
+	'NavigationLogoLinkWindow': ['main'],
+	'NavigationTreePointerEnable': true,
+	'FirstLevelNavigationItems': '100',
+	'NavigationTreeDisplayItemFilterMinimum': '30',
+	'NumRecentTables': '10',
+	'NumFavoriteTables': '10',
+	'NavigationWidth': '240',
+	'MaxNavigationItems': '50',
+	'NavigationTreeEnableGrouping': true,
+	'NavigationTreeEnableExpansion': true,
+	'NavigationTreeShowTables': true,
+	'NavigationTreeShowViews': true,
+	'NavigationTreeShowFunctions': true,
+	'NavigationTreeShowProcedures': true,
+	'NavigationTreeShowEvents': true,
+	'NavigationDisplayServers': true,
+	'DisplayServersList': false,
+	'NavigationTreeDisplayDbFilterMinimum': '30',
+	'NavigationTreeDbSeparator': '_',
+	'NavigationTreeDefaultTabTable': ['structure'],
+	'NavigationTreeDefaultTabTable2': [''],
+	'NavigationTreeTableSeparator': '__',
+	'NavigationTreeTableLevel': '1'});
+});
+if (typeof configScriptLoaded !== "undefined" && configInlineParams) loadInlineConfig();
+</script>
+</div></div></div></div><div class="pma_drop_handler">Largue ficheiros aqui</div><div class="pma_sql_import_status"><h2>SQL upload ( <span class="pma_import_count">0</span> ) <span class="close">x</span><span class="minimize">-</span></h2><div></div></div></div><div id="pma_header"></div><noscript><div class="error"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_error" /> O Javascript tem de estar activo a partir deste ponto!</div></noscript><div id="floating_menubar" style="margin-left: 243px; left: 0px; position: fixed; top: 0px; width: 100%; z-index: 99;"><div id="serverinfo"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_host item"><a href="http://localhost/phpmyadmin/index.php" class="item">Servidor: localhost:3306</a><span class="separator item">&nbsp;»</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_db item"><a href="http://localhost/phpmyadmin/db_structure.php?db=StartSom" class="item">Base de Dados: StartSom</a><span class="separator item">&nbsp;»</span><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_tbl item"><a href="http://localhost/phpmyadmin/sql.php?db=StartSom&amp;table=atividades" class="item">Tabela: atividades</a><div class="clearfloat"></div></div><div id="topmenucontainer" class="menucontainer"><i class="scrollindicator scrollindicator--left"><img alt="" title="" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" class="icon ic_b_left"></i><div class="navigationbar" style="width: auto; overflow: visible;"><ul id="topmenu" class="resizable-menu"><li>
+
+            <a href="http://localhost/phpmyadmin/sql.php?db=StartSom&amp;table=atividades&amp;pos=0" class="tab">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Procurar" alt="Procurar" class="icon ic_b_browse">&nbsp;Procurar
+            </a>
+        </li>
+<li class="active">
+
+            <a href="http://localhost/phpmyadmin/tbl_structure.php?db=StartSom&amp;table=atividades" class="tabactive">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Estrutura" alt="Estrutura" class="icon ic_b_props">&nbsp;Estrutura
+            </a>
+        </li>
+<li>
+
+            <a href="http://localhost/phpmyadmin/tbl_sql.php?db=StartSom&amp;table=atividades" class="tab">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="SQL" alt="SQL" class="icon ic_b_sql">&nbsp;SQL
+            </a>
+        </li>
+<li>
+
+            <a href="http://localhost/phpmyadmin/tbl_select.php?db=StartSom&amp;table=atividades" class="tab">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Pesquisar" alt="Pesquisar" class="icon ic_b_search">&nbsp;Pesquisar
+            </a>
+        </li>
+<li>
+
+            <a href="http://localhost/phpmyadmin/tbl_change.php?db=StartSom&amp;table=atividades" class="tab">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Insere" alt="Insere" class="icon ic_b_insrow">&nbsp;Insere
+            </a>
+        </li>
+<li>
+
+            <a href="http://localhost/phpmyadmin/tbl_export.php?db=StartSom&amp;table=atividades&amp;single_table=true" class="tab">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_tblexport">&nbsp;Exportar
+            </a>
+        </li>
+<li>
+
+            <a href="http://localhost/phpmyadmin/tbl_import.php?db=StartSom&amp;table=atividades" class="tab">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Importar" alt="Importar" class="icon ic_b_tblimport">&nbsp;Importar
+            </a>
+        </li>
+<li>
+
+            <a href="http://localhost/phpmyadmin/server_privileges.php?db=StartSom&amp;table=atividades&amp;checkprivsdb=StartSom&amp;checkprivstable=atividades&amp;viewing_mode=table" class="tab">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Privilégios" alt="Privilégios" class="icon ic_s_rights">&nbsp;Privilégios
+            </a>
+        </li>
+<li>
+
+            <a href="http://localhost/phpmyadmin/tbl_operations.php?db=StartSom&amp;table=atividades" class="tab">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Operações" alt="Operações" class="icon ic_b_tblops">&nbsp;Operações
+            </a>
+        </li>
+
+
+<li class="submenu shown" style=""><a href="#" class="tab nowrap"><img alt="" title="" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" class="icon ic_b_more">Mais</a><ul class="notonly"><li>
+
+            <a href="http://localhost/phpmyadmin/tbl_tracking.php?db=StartSom&amp;table=atividades" class="tab">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Rastreando" alt="Rastreando" class="icon ic_eye">&nbsp;Rastreando
+            </a>
+        </li><li>
+
+            <a href="http://localhost/phpmyadmin/tbl_triggers.php?db=StartSom&amp;table=atividades" class="tab">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Acionadores" alt="Acionadores" class="icon ic_b_triggers">&nbsp;Acionadores
+            </a>
+        </li></ul></li><div class="clearfloat"></div></ul></div>
+<i class="scrollindicator scrollindicator--right"><img alt="" title="" src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" class="icon ic_b_right"></i></div></div>
+<span id="page_nav_icons"><span id="lock_page_icon"></span><span id="page_settings_icon" style="display: inline;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Configurações relacionadas com a página" alt="Configurações relacionadas com a página" class="icon ic_s_cog"></span><a id="goto_pagetop" href="#"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Clique na barra para deslizar para o topo da página" alt="Clique na barra para deslizar para o topo da página" class="icon ic_s_top"></a></span><div id="pma_console_container">
+    <div id="pma_console" style="margin-left: 243px;">
+                <div class="toolbar collapsed">
+                    <div class="switch_button console_switch">
+            <img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Consola de Consulta SQL" alt="Consola de Consulta SQL" class="icon ic_console">
+            <span>Consola</span>
+        </div>
+                            <div class="button clear">
+            
+            <span>Limpar</span>
+        </div>
+                            <div class="button history">
+            
+            <span>Histórico</span>
+        </div>
+                            <div class="button options">
+            
+            <span>Opções</span>
+        </div>
+                            <div class="button bookmarks">
+            
+            <span>Marcadores</span>
+        </div>
+                            <div class="button debug hide">
+            
+            <span>Depurar SQL</span>
+        </div>
+            </div>
+                <div class="content" style="height: 92px; margin-bottom: -98.248px; display: none;">
+            <div class="console_message_container">
+                <div class="message welcome binded">
+                    <span id="instructions-0">
+                        Use Ctrl+Enter para executar a consulta                    </span>
+                    <span class="hide" id="instructions-1">
+                        Pressione Enter para executar consulta                    </span>
+                </div>
+                                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="SequelizeMeta">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `SequelizeMeta`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="SequelizeMeta">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `SequelizeMeta`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="atividades">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `atividades`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="atividades">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `atividades`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="atividades">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `atividades`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="atividades">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `atividades`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="SequelizeMeta">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `SequelizeMeta`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="SequelizeMeta">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `SequelizeMeta`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="SequelizeMeta">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `SequelizeMeta`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="atividades">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `atividades`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="atividades">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `atividades`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="SequelizeMeta">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `SequelizeMeta`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="atividades">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `atividades`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="atividades">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `atividades`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="StartSom" targettable="atividades">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span>StartSom</span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span>Durante a sessão atual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `atividades`</span>
+                        </div>
+                                                </div><!-- console_message_container -->
+            <div class="query_input">
+                <span class="console_query_input"><div class="CodeMirror cm-s-pma CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 16px;"><textarea style="position: absolute; bottom: -1em; padding: 0px; width: 1px; height: 1em; outline: none;" autocorrect="off" autocapitalize="none" spellcheck="false" tabindex="0" wrap="off"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="true"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: 0px; border-right-width: 30px; min-height: 17px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div style="position: relative; outline: none;" role="presentation"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 0px; top: 0px; height: 17px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 17px;"></div><div class="CodeMirror-gutters" style="height: 47px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div></div></div></div></span>
+            </div>
+        </div><!-- message end -->
+                <div class="mid_layer"></div>
+                <div class="card ungrouped" id="debug_console">
+            <div class="toolbar ">
+                    <div class="button order order_asc active">
+            
+            <span>Ascendente</span>
+        </div>
+                            <div class="button order order_desc">
+            
+            <span>Descendente</span>
+        </div>
+                            <div class="text">
+            
+            <span>Ordem:</span>
+        </div>
+                            <div class="switch_button">
+            
+            <span>Depurar SQL</span>
+        </div>
+                            <div class="button order_by sort_count">
+            
+            <span>Contagem</span>
+        </div>
+                            <div class="button order_by sort_exec active">
+            
+            <span>Ordem de execução</span>
+        </div>
+                            <div class="button order_by sort_time">
+            
+            <span>Tempo gasto</span>
+        </div>
+                            <div class="text">
+            
+            <span>Ordenar por:</span>
+        </div>
+                            <div class="button group_queries">
+            
+            <span>Agrupar consultas</span>
+        </div>
+                            <div class="button ungroup_queries">
+            
+            <span>Desagrupar consultas</span>
+        </div>
+            </div>
+            <div class="content debug" style="height: 92px;">
+                <div class="message welcome binded">Algum erro ocorreu ao carregar a informação de debug do SQL.</div>
+                <div class="debugLog"></div>
+            </div> <!-- Content -->
+            <div class="templates">
+                <div class="debug_query action_content">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action dbg_show_trace">
+            Mostrar rastro
+                    </span>
+                            <span class="action dbg_hide_trace">
+            Ocultar rastro
+                    </span>
+                            <span class="text count hide">
+            Contagem
+                    </span>
+                            <span class="text time">
+            Tempo gasto
+                    </span>
+            </div>
+            </div> <!-- Template -->
+        </div> <!-- Debug SQL card -->
+                    <div class="card" id="pma_bookmarks">
+                <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Marcadores</span>
+        </div>
+                            <div class="button refresh">
+            
+            <span>Actualizar</span>
+        </div>
+                            <div class="button add">
+            
+            <span>Adicionar</span>
+        </div>
+            </div>
+                <div class="content bookmark" style="height: 92px;">
+                    <div class="message welcome binded">
+    <span>Sem marcadores</span>
+</div>
+
+                </div>
+                <div class="mid_layer"></div>
+                <div class="card add">
+                    <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Adicionar marcador</span>
+        </div>
+            </div>
+                    <div class="content add_bookmark" style="height: 92px;">
+                        <div class="options">
+                            <label>
+                                Rótulo: <input type="text" name="label">
+                            </label>
+                            <label>
+                                Base de dados destino: <input type="text" name="targetdb">
+                            </label>
+                            <label>
+                                <input type="checkbox" name="shared">Partilhar marcador                            </label>
+                            <button type="submit" name="submit">OK</button>
+                        </div> <!-- options -->
+                        <div class="query_input">
+                            <span class="bookmark_add_input"><div class="CodeMirror cm-s-pma CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 16px;"><textarea style="position: absolute; bottom: -1em; padding: 0px; width: 1px; height: 1em; outline: none;" autocorrect="off" autocapitalize="none" spellcheck="false" tabindex="0" wrap="off"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="true"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: 0px; border-right-width: 30px; min-height: 17px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div style="position: relative; outline: none;" role="presentation"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 0px; top: 0px; height: 17px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 17px;"></div><div class="CodeMirror-gutters" style="height: 47px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div></div></div></div></span>
+                        </div>
+                    </div>
+                </div> <!-- Add bookmark card -->
+            </div> <!-- Bookmarks card -->
+                        <div class="card" id="pma_console_options">
+            <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Opções</span>
+        </div>
+                            <div class="button default">
+            
+            <span>Definir como predefinição</span>
+        </div>
+            </div>
+            <div class="content" style="height: 92px;">
+                <label>
+                    <input type="checkbox" name="always_expand">Expandir sempre mensagens da consulta                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="start_history">Mostrar histórico da consulta no início                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="current_query" checked="checked">Mostrar consulta de navegação atual                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="enter_executes">
+                        Execute consultas com Enter e insira nova linha 
+com Shift + Enter. Para definir como permanente, vá em configurações.   
+             </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="dark_theme">Mudar para o tema escuro                </label>
+                <br>
+            </div>
+        </div> <!-- Options card -->
+        <div class="templates">
+                        <div class="query_actions">
+                    <span class="action collapse">
+            Ocultar
+                    </span>
+                            <span class="action expand">
+            Mostrar
+                    </span>
+                            <span class="action requery">
+            Re-consultar
+                    </span>
+                            <span class="action edit">
+            Edita
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfil
+                    </span>
+                            <span class="action bookmark">
+            Marcadores
+                    </span>
+                            <span class="text failed">
+            Consulta falhou
+                    </span>
+                            <span class="text targetdb">
+            Base de Dados
+                            : <span></span>
+                    </span>
+                            <span class="text query_time">
+            Tempo de execução da consulta
+                            : <span></span>
+                    </span>
+            </div>
+        </div>
+    </div> <!-- #console end -->
+</div> <!-- #console_container end -->
+<div id="page_content"><a class="hide" id="update_recent_tables" href="http://localhost/phpmyadmin/index.php?ajax_request=1&amp;recent_table=1"></a><div id="page_settings_modal"><div class="page_settings"><form method="post" action="tbl_structure.php?db=StartSom&amp;table=atividades&amp;server=1&amp;target=" class="config-form disableAjax"><input type="hidden" name="tab_hash" value=""><input type="hidden" name="check_page_refresh" id="check_page_refresh" value="1">
+<input type="hidden" name="token" value="2a35717f33347827257b7c642a626437">
+<input type="hidden" name="submit_save" value="TableStructure"><input type="hidden" name="token" value="2a35717f33347827257b7c642a626437"><ul class="tabs responsivetable">
+
+                                    <li class="active">
+
+            <a href="#TableStructure">
+            Estrutura da tabela
+            </a>
+        </li>
+            </ul>
+<br><div class="tabs_contents"><fieldset class="optbox" id="TableStructure" style="">
+<legend>Estrutura da tabela</legend>
+    <p>Definições para a estrutura da tabela (lista de colunas).</p>
+<table width="100%" cellspacing="0">
+<tbody><tr><th><label for="HideStructureActions">Ocultar as acções à estrutura da tabela</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_HideStructureActions" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Se as acções da estrutura da tabela devem ser escondidas.</small></th><td><span class="checkbox"><input type="checkbox" name="HideStructureActions" id="HideStructureActions" checked="checked"></span><a class="restore-default hide" href="#HideStructureActions" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="ShowColumnComments">Mostrar comentários da coluna</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_ShowColumnComments" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Se os comentários de coluna devem ser exibidas na vista de estrutura da tabela</small></th><td><span class="checkbox"><input type="checkbox" name="ShowColumnComments" id="ShowColumnComments" checked="checked"></span><a class="restore-default hide" href="#ShowColumnComments" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr class="group-header group-header-1">
+    <th colspan="2">
+        Transformações predefinidas
+    </th>
+</tr>
+<tr class="group-field group-field-1"><th><label for="DefaultTransformations-Hex">Transformações predefinidas para Hex</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DefaultTransformations_Hex" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Valores para a lista de opções de transformações 
+predefinidas. Estas serão substituídas se a transformação for preenchida
+ na pagina da estrutura da tabela.</small></th><td><textarea cols="35" rows="5" name="DefaultTransformations-Hex" id="DefaultTransformations-Hex">2</textarea><a class="restore-default hide" href="#DefaultTransformations-Hex" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr class="group-field group-field-1"><th><label for="DefaultTransformations-Substring">Transformações predefinidas para Substrings</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DefaultTransformations_Substring" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Valores para a lista de opções de transformações 
+predefinidas. Estas serão substituídas se a transformação for preenchida
+ na pagina da estrutura da tabela.</small></th><td><textarea cols="35" rows="5" name="DefaultTransformations-Substring" id="DefaultTransformations-Substring">0
+all
+…</textarea><a class="restore-default hide" href="#DefaultTransformations-Substring" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr class="group-field group-field-1"><th><label for="DefaultTransformations-Bool2Text">Transformações predefinidas para Bool2Text</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DefaultTransformations_Bool2Text" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Valores para a lista de opções de transformações 
+predefinidas. Estas serão substituídas se a transformação for preenchida
+ na pagina da estrutura da tabela.</small></th><td><textarea cols="35" rows="5" name="DefaultTransformations-Bool2Text" id="DefaultTransformations-Bool2Text">T
+F</textarea><a class="restore-default hide" href="#DefaultTransformations-Bool2Text" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr class="group-field group-field-1"><th><label for="DefaultTransformations-External">Transformações predefinidas para External</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DefaultTransformations_External" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Valores para a lista de opções de transformações 
+predefinidas. Estas serão substituídas se a transformação for preenchida
+ na pagina da estrutura da tabela.</small></th><td><textarea cols="35" rows="5" name="DefaultTransformations-External" id="DefaultTransformations-External">0
+-f /dev/null -i -wrap -q
+1
+1</textarea><a class="restore-default hide" href="#DefaultTransformations-External" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr class="group-field group-field-1"><th><label for="DefaultTransformations-PreApPend">Transformações predefinidas para PreApPend</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DefaultTransformations_PreApPend" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Valores para a lista de opções de transformações 
+predefinidas. Estas serão substituídas se a transformação for preenchida
+ na pagina da estrutura da tabela.</small></th><td><textarea cols="35" rows="5" name="DefaultTransformations-PreApPend" id="DefaultTransformations-PreApPend" class="custom"></textarea><a class="restore-default hide" href="#DefaultTransformations-PreApPend" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload"></a></td></tr><tr class="group-field group-field-1"><th><label for="DefaultTransformations-DateFormat">Transformações predefinidas para DateFormat</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DefaultTransformations_DateFormat" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Valores para a lista de opções de transformações 
+predefinidas. Estas serão substituídas se a transformação for preenchida
+ na pagina da estrutura da tabela.</small></th><td><textarea cols="35" rows="5" name="DefaultTransformations-DateFormat" id="DefaultTransformations-DateFormat">0
+
+local</textarea><a class="restore-default hide" href="#DefaultTransformations-DateFormat" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr class="group-field group-field-1"><th><label for="DefaultTransformations-Inline">Transformações predefinidas para Inline</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DefaultTransformations_Inline" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Valores para a lista de opções de transformações 
+predefinidas. Estas serão substituídas se a transformação for preenchida
+ na pagina da estrutura da tabela.</small></th><td><textarea cols="35" rows="5" name="DefaultTransformations-Inline" id="DefaultTransformations-Inline">100
+100
+</textarea><a class="restore-default hide" href="#DefaultTransformations-Inline" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr class="group-field group-field-1"><th><label for="DefaultTransformations-TextImageLink">Transformações predefinidas para TextImageLink</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DefaultTransformations_TextImageLink" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Valores para a lista de opções de transformações 
+predefinidas. Estas serão substituídas se a transformação for preenchida
+ na pagina da estrutura da tabela.</small></th><td><textarea cols="35" rows="5" name="DefaultTransformations-TextImageLink" id="DefaultTransformations-TextImageLink" class="custom">100
+50</textarea><a class="restore-default hide" href="#DefaultTransformations-TextImageLink" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload"></a></td></tr><tr class="group-field group-field-1"><th><label for="DefaultTransformations-TextLink">Transformações predefinidas para TextLink</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DefaultTransformations_TextLink" target="documentation"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+</span><small>Valores para a lista de opções de transformações 
+predefinidas. Estas serão substituídas se a transformação for preenchida
+ na pagina da estrutura da tabela.</small></th><td><textarea cols="35" rows="5" name="DefaultTransformations-TextLink" id="DefaultTransformations-TextLink" class="custom">
+</textarea><a class="restore-default hide" href="#DefaultTransformations-TextLink" title="Restaurar valor predefinido" style="display: inline-block; opacity: 0.25;"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_s_reload"></a></td></tr></tbody></table>
+</fieldset>
+</div>
+</form>
+<script type="text/javascript">
+if (typeof configInlineParams === "undefined" || !Array.isArray(configInlineParams)) configInlineParams = [];
+configInlineParams.push(function() {
+$.extend(PMA_messages, {
+	'error_nan_p': 'Número não positivo!',
+	'error_nan_nneg': 'Não é um número não-negativo!',
+	'error_incorrect_port': 'Número de porta inválido!',
+	'error_invalid_value': 'Valor incorrecto!',
+	'error_value_lte': 'O valor precisa ser igual ou menor que %s!'});
+$.extend(defaultValues, {
+	'HideStructureActions': true,
+	'ShowColumnComments': true,
+	'DefaultTransformations-Hex': '2',
+	'DefaultTransformations-Substring': '0\nall\n…',
+	'DefaultTransformations-Bool2Text': 'T\nF',
+	'DefaultTransformations-External': '0\n-f /dev/null -i -wrap -q\n1\n1',
+	'DefaultTransformations-PreApPend': '\n',
+	'DefaultTransformations-DateFormat': '0\n\nlocal',
+	'DefaultTransformations-Inline': '100\n100\n',
+	'DefaultTransformations-TextImageLink': '\n100\n50',
+	'DefaultTransformations-TextLink': '\n\n'});
+});
+if (typeof configScriptLoaded !== "undefined" && configInlineParams) loadInlineConfig();
+</script>
+</div></div><form method="post" action="tbl_structure.php" class="append_fields_form ajax lock-page">
+    <input type="hidden" name="db" value="StartSom"><input type="hidden" name="table" value="atividades"><input type="hidden" name="orig_num_fields" value="1"><input type="hidden" name="orig_field_where" value=""><input type="hidden" name="orig_after_field" value=""><input type="hidden" name="selected[0]" value="status"><input type="hidden" name="field_orig[0]" value="status"><input type="hidden" name="field_type_orig[0]" value="VARCHAR"><input type="hidden" name="field_length_orig[0]" value="255"><input type="hidden" name="field_default_value_orig[0]" value=""><input type="hidden" name="field_default_type_orig[0]" value="NONE"><input type="hidden" name="field_collation_orig[0]" value="utf8mb4_0900_ai_ci"><input type="hidden" name="field_attribute_orig[0]" value=""><input type="hidden" name="field_null_orig[0]" value="NO"><input type="hidden" name="field_extra_orig[0]" value=""><input type="hidden" name="field_comments_orig[0]" value=""><input type="hidden" name="field_virtuality_orig[0]" value=""><input type="hidden" name="field_expression_orig[0]" value=""><input type="hidden" name="token" value="2a35717f33347827257b7c642a626437">
+                <input type="hidden" name="primary_indexes" value="[]">
+    <input type="hidden" name="unique_indexes" value="[]">
+    <input type="hidden" name="indexes" value="[]">
+    <input type="hidden" name="fulltext_indexes" value="[]">
+    <input type="hidden" name="spatial_indexes" value="[]">
+
+                <div class="responsivetable">
+<table id="table_columns" class="noclick">
+    <caption class="tblHeaders">
+        Estrutura        <a href="http://localhost/phpmyadmin/url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Fcreate-table.html" target="mysql_doc"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+    </caption>
+    <tbody><tr>
+        <th>
+            Nome        </th>
+        <th>
+            Tipo            <a href="http://localhost/phpmyadmin/url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Fdata-types.html" target="mysql_doc"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Documentação" alt="Documentação" class="icon ic_b_help"></a>
+        </th>
+        <th>
+            Tamanho/Valores*            <span class="pma_hint"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_b_help"><span class="hide">Se o tipo de campo é "enum" ou "set", por favor entre com valores usando este formato: 'a','b','c'…<br>Se
+ você precisar colocar uma barra contrária ("\") ou aspas simples ("'") 
+entre esses valores, coloque uma barra contrária antes (por exemplo 
+'\\xyz' ou 'a\'b').</span></span>
+        </th>
+        <th>
+            Predefinido            <span class="pma_hint"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_b_help"><span class="hide">Para valores predefinidos, digite um único valor, sem barras invertidas de escape ou citações, usando este formato: a</span></span>
+        </th>
+        <th>
+            Agrupamento (Collation)        </th>
+        <th>
+            Atributos        </th>
+        <th>
+            Nulo        </th>
+
+                
+                
+        <th>
+            <abbr title="AUTO_INCREMENT">A_I</abbr>
+        </th>
+        <th>
+            Comentários        </th>
+
+                    <th>
+                Virtualidade            </th>
+        
+                    <th>
+                Mover coluna(s)            </th>
+        
+                    <th>
+                Tipo MIME            </th>
+            <th>
+                <a href="http://localhost/phpmyadmin/transformation_overview.php#transformation" title="Lista de transformações disponíveis e suas opções" target="_blank">
+                    Transformação de visualização do navegador                </a>
+            </th>
+            <th>
+                Opções de transformação de visualização do navegador                <span class="pma_hint"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_b_help"><span class="hide">Por favor, digite os valores para as opções de transformação usando este formato: 'a', 100, b,'c'…<br>Se
+ por acaso precisar inserir uma barra invertida ("\") ou aspas simples 
+("'") entre esses valores, faça-o precedendo-as com uma barra invertida 
+(por exemplo '\\xyz' ou 'a\'b').</span></span>
+            </th>
+            <th>
+                <a href="http://localhost/phpmyadmin/transformation_overview.php#input_transformation" title="Lista de transformações disponíveis e suas opções" target="_blank">
+                    Transformação de entrada                </a>
+            </th>
+            <th>
+                Opções de transformação de dado                <span class="pma_hint"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="" alt="" class="icon ic_b_help"><span class="hide">Por favor, digite os valores para as opções de transformação usando este formato: 'a', 100, b,'c'…<br>Se
+ por acaso precisar inserir uma barra invertida ("\") ou aspas simples 
+("'") entre esses valores, faça-o precedendo-as com uma barra invertida 
+(por exemplo '\\xyz' ou 'a\'b').</span></span>
+            </th>
+            </tr>
+                                <tr>
+            
+
+<td class="center">
+            
+<input id="field_0_1" type="text" name="field_name[0]" maxlength="64" class="textfield" title="Coluna" size="10" value="status">
+
+    <p style="font-size:80%;margin:5px 2px" id="central_columns_0_1">
+        <a data-maxrows="25" href="#" class="central_columns_dialog">
+            Escolher a partir das Colunas Centrais        </a>
+    </p>
+    </td>
+<td class="center">
+        <select class="column_type" name="field_type[0]" id="field_0_2">
+    <option title="Um inteiro de 4 byte, a gama atribuída é de -2,147,483,648 a 2,147,483,647, a gama não atribuída é de 0 a 4,294,967,295">INT</option><option title="Uma variável de comprimento (0-65,535) do tipo string, o comprimento máximo efectivo está sujeito ao tamanho máximo de linha">VARCHAR</option><option title="Uma coluna de texto com um comprimento máximo de 65.535 (2^16 - 1) caracteres, guardada com um prefixo de dois bytes indicando o comprimento do valor em bytes">TEXT</option><option title="Uma data, intervalo suportado é 1000-01-01 até 9999-12-31">DATE</option><optgroup label="Numérico"><option title="Um inteiro de 1 byte, a gama atribuída é de -128 a 127, a gama não atribuída é de 0 a 255">TINYINT</option><option title="Um inteiro de 2 byte, a gama atribuída é de -32,768 a 32,767, a gama não atribuída é de 0 a 65,535">SMALLINT</option><option title="Um inteiro de 3 byte, a gama atribuída é de -8,388,608 a 8,388,607, a gama não atribuída é de 0 a 16,777,215">MEDIUMINT</option><option title="Um inteiro de 4 byte, a gama atribuída é de -2,147,483,648 a 2,147,483,647, a gama não atribuída é de 0 a 4,294,967,295">INT</option><option title="Um inteiro de 8 byte, a gama atribuída é de -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807, a gama não atribuída é de 0 a 18,446,744,073,709,551,615">BIGINT</option><option disabled="disabled">-</option><option title="Um número de ponto fixo (M, D), a quantidade máxima de dígitos (M) é de 65 (por predefinição 10), a quantidade máxima de decimais (D) é de 30 (por predefinição 0)">DECIMAL</option><option title="Um pequeno número de ponto flutuante, os valores permitidos são -3.402823466E+38 a -1.175494351E-38, 0 e 1.175494351E-38 a 3.402823466E+38">FLOAT</option><option title="Um número de ponto flutuante com dupla precisão, os valores permitidos são -1.7976931348623157E+308 a -2.2250738585072014E-308, 0 e 2.2250738585072014E-308 a 1.7976931348623157E+308">DOUBLE</option><option title="Sinónimo para DOUBLE (excepção: no modo SQL REAL_AS_FLOAT é sinónimo para FLOAT)">REAL</option><option disabled="disabled">-</option><option title="Um tipo de campo bit (M), armazena M de bits por valor (a predefinição é 1 e o máximo é 64)">BIT</option><option title="Um sinónimo para TINYINT(1), um valor de zero é considerado falso, valores diferentes de zero são considerados verdadeiros">BOOLEAN</option><option title="Um alias para BIGINT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE">SERIAL</option></optgroup><optgroup label="Data e hora"><option title="Uma data, intervalo suportado é 1000-01-01 até 9999-12-31">DATE</option><option title="Uma combinação de data e hora, o intervalo suportado é 1000-01-01 00:00:00 até 9999-12-31 23:59:59">DATETIME</option><option title="Um carimbo temporal, intervalo é desde 1970-01-01 00:00:01 UTC até 2038-01-09 03:14:07 UTC, guardado como um número de segundos desde a época (1970-01-01 00:00:00 UTC)">TIMESTAMP</option><option title="Uma hora, intervalo é -838:59:59 até 838:59:59">TIME</option><option title="Um ano no formato de quatro dígitos (4, predefinição) ou de dois dígitos (2), os valores permitidos são de 70 (1970) até 69 (2069) ou 1901 até 2155 e 0000">YEAR</option></optgroup><optgroup label="Segmento"><option title="Uma cadeia de caracteres de comprimento fixo (0-255, predefinição 1) que é sempre preenchida à direita com espaços até o tamanho especificado quando armazenado">CHAR</option><option selected="selected" title="Uma variável de comprimento (0-65,535) do tipo string, o comprimento máximo efectivo está sujeito ao tamanho máximo de linha">VARCHAR</option><option disabled="disabled">-</option><option title="Uma coluna de texto com um comprimento máximo de 255 (2^8 - 1) caracteres, guardados com um prefixo de um byte indicando o comprimento do valor em bytes">TINYTEXT</option><option title="Uma coluna de texto com um comprimento máximo de 65.535 (2^16 - 1) caracteres, guardada com um prefixo de dois bytes indicando o comprimento do valor em bytes">TEXT</option><option title="Uma coluna de texto com um comprimento máximo de 16.777.215 (2^24 - 1) caracteres, guardada com um prefixo de três bytes que indica o comprimento do valor em bytes">MEDIUMTEXT</option><option title="Uma coluna de texto com um comprimento máximo de 4.294.967.295 ou 4Gb (2^32 - 1) caracteres, guardada com um prefixo de quatro bytes que indica o comprimento do valor em bytes">LONGTEXT</option><option disabled="disabled">-</option><option title="Semelhante ao tipo CHAR, mas armazena strings de bytes binários em vez de strings de caracteres não-binários">BINARY</option><option title="Semelhante ao tipo VARCHAR, mas armazena strings de bytes binários em vez de strings de caracteres não-binários">VARBINARY</option><option disabled="disabled">-</option><option title="Uma coluna tipo BLOB com um comprimento máximo de 255 (2^8 - 1) bytes, armazenada com um prefixo de um byte indicando o comprimento do valor">TINYBLOB</option><option title="Uma coluna do tipo BLOB com um comprimento máximo de 16.777.215 (2^24 - 1) bytes, armazenada com um prefixo de três bytes que indica o comprimento do valor">MEDIUMBLOB</option><option title="Uma coluna tipo BLOB com um comprimento máximo de 65.535 (2^16 - 1) bytes, armazenada com um prefixo de dois byte indicando o comprimento do valor">BLOB</option><option title="Uma coluna BLOB com um comprimento máximo de 4.294.967.295 ou 4GB (2^32 - 1) bytes, armazenados com um prefixo de quatro bytes indicando o comprimento do valor">LONGBLOB</option><option disabled="disabled">-</option><option title="Uma enumeração, escolhida a partir da lista de até 65.535 valores ou o valor especial '' do erro">ENUM</option><option title="Um valor único escolhido de um conjunto de até 64 membros">SET</option></optgroup><optgroup label="Espacial"><option title="Um tipo que pode armazenar uma geometria de qualquer tipo">GEOMETRY</option><option title="Um ponto no espaço de 2 dimensões">POINT</option><option title="Uma curva com uma interpolação linear entre os pontos">LINESTRING</option><option title="Um polígono">POLYGON</option><option title="Uma coleção de pontos">MULTIPOINT</option><option title="Uma coleção de curvas com uma interpolação linear entre os pontos">MULTILINESTRING</option><option title="Uma coleção de polígonos">MULTIPOLYGON</option><option title="Uma coleção de objetos geométricos de qualquer tipo">GEOMETRYCOLLECTION</option></optgroup><optgroup label="JSON"><option title="Armazena e ativa acesso eficiente a dados em documentos JSON (Notação de Objectos em JavaScript)">JSON</option></optgroup>
+</select>
+    </td>
+<td class="center">
+        <input id="field_0_3" type="text" name="field_length[0]" size="8" value="255" class="textfield">
+<p class="enum_notice" id="enum_notice_0_3" style="display: none;">
+    <a href="#" class="open_enum_editor">
+        Editar valores ENUM/SET    </a>
+</p>
+    </td>
+<td class="center">
+        
+    
+<select name="field_default_type[0]" id="field_0_4" class="default_type">
+            <option value="NONE" selected="selected">
+            Nenhum
+        </option>
+            <option value="USER_DEFINED">
+            Como definido:
+        </option>
+            <option value="NULL">
+            NULL
+        </option>
+            <option value="CURRENT_TIMESTAMP">
+            CURRENT_TIMESTAMP
+        </option>
+    </select>
+    <input type="text" name="field_default_value[0]" size="12" class="textfield default_value" style="display: none;">
+    </td>
+<td class="center">
+        <select dir="ltr" name="field_collation[0]" id="field_0_5" lang="en">
+<option value=""></option>
+<optgroup label="armscii8" title="ARMSCII-8 Armenian">
+<option value="armscii8_bin" title="Armênio, binário">armscii8_bin</option>
+<option value="armscii8_general_ci" title="Armênio, Indiferente a maiúsculas/minúsculas">armscii8_general_ci</option>
+</optgroup>
+<optgroup label="ascii" title="US ASCII">
+<option value="ascii_bin" title="Europa Ocidental, binário">ascii_bin</option>
+<option value="ascii_general_ci" title="Europa Ocidental, Indiferente a maiúsculas/minúsculas">ascii_general_ci</option>
+</optgroup>
+<optgroup label="big5" title="Big5 Traditional Chinese">
+<option value="big5_bin" title="Chinês Tradicional, binário">big5_bin</option>
+<option value="big5_chinese_ci" title="Chinês Tradicional, Indiferente a maiúsculas/minúsculas">big5_chinese_ci</option>
+</optgroup>
+<optgroup label="binary" title="Binary pseudo charset">
+<option value="binary" title="Binário">binary</option>
+</optgroup>
+<optgroup label="cp1250" title="Windows Central European">
+<option value="cp1250_bin" title="Europa Central, binário">cp1250_bin</option>
+<option value="cp1250_croatian_ci" title="Croata, Indiferente a maiúsculas/minúsculas">cp1250_croatian_ci</option>
+<option value="cp1250_czech_cs" title="Checo, Sensível a maiúsculas/minúsculas">cp1250_czech_cs</option>
+<option value="cp1250_general_ci" title="Europa Central, Indiferente a maiúsculas/minúsculas">cp1250_general_ci</option>
+<option value="cp1250_polish_ci" title="Polaco, Indiferente a maiúsculas/minúsculas">cp1250_polish_ci</option>
+</optgroup>
+<optgroup label="cp1251" title="Windows Cyrillic">
+<option value="cp1251_bin" title="Cirílico, binário">cp1251_bin</option>
+<option value="cp1251_bulgarian_ci" title="Búlgaro, Indiferente a maiúsculas/minúsculas">cp1251_bulgarian_ci</option>
+<option value="cp1251_general_ci" title="Cirílico, Indiferente a maiúsculas/minúsculas">cp1251_general_ci</option>
+<option value="cp1251_general_cs" title="Cirílico, Sensível a maiúsculas/minúsculas">cp1251_general_cs</option>
+<option value="cp1251_ukrainian_ci" title="Ucraniano, Indiferente a maiúsculas/minúsculas">cp1251_ukrainian_ci</option>
+</optgroup>
+<optgroup label="cp1256" title="Windows Arabic">
+<option value="cp1256_bin" title="Árabe, binário">cp1256_bin</option>
+<option value="cp1256_general_ci" title="Árabe, Indiferente a maiúsculas/minúsculas">cp1256_general_ci</option>
+</optgroup>
+<optgroup label="cp1257" title="Windows Baltic">
+<option value="cp1257_bin" title="Báltico, binário">cp1257_bin</option>
+<option value="cp1257_general_ci" title="Báltico, Indiferente a maiúsculas/minúsculas">cp1257_general_ci</option>
+<option value="cp1257_lithuanian_ci" title="Lituano, Indiferente a maiúsculas/minúsculas">cp1257_lithuanian_ci</option>
+</optgroup>
+<optgroup label="cp850" title="DOS West European">
+<option value="cp850_bin" title="Europa Ocidental, binário">cp850_bin</option>
+<option value="cp850_general_ci" title="Europa Ocidental, Indiferente a maiúsculas/minúsculas">cp850_general_ci</option>
+</optgroup>
+<optgroup label="cp852" title="DOS Central European">
+<option value="cp852_bin" title="Europa Central, binário">cp852_bin</option>
+<option value="cp852_general_ci" title="Europa Central, Indiferente a maiúsculas/minúsculas">cp852_general_ci</option>
+</optgroup>
+<optgroup label="cp866" title="DOS Russian">
+<option value="cp866_bin" title="Russo, binário">cp866_bin</option>
+<option value="cp866_general_ci" title="Russo, Indiferente a maiúsculas/minúsculas">cp866_general_ci</option>
+</optgroup>
+<optgroup label="cp932" title="SJIS for Windows Japanese">
+<option value="cp932_bin" title="Japonês, binário">cp932_bin</option>
+<option value="cp932_japanese_ci" title="Japonês, Indiferente a maiúsculas/minúsculas">cp932_japanese_ci</option>
+</optgroup>
+<optgroup label="dec8" title="DEC West European">
+<option value="dec8_bin" title="Europa Ocidental, binário">dec8_bin</option>
+<option value="dec8_swedish_ci" title="Sueco, Indiferente a maiúsculas/minúsculas">dec8_swedish_ci</option>
+</optgroup>
+<optgroup label="eucjpms" title="UJIS for Windows Japanese">
+<option value="eucjpms_bin" title="Japonês, binário">eucjpms_bin</option>
+<option value="eucjpms_japanese_ci" title="Japonês, Indiferente a maiúsculas/minúsculas">eucjpms_japanese_ci</option>
+</optgroup>
+<optgroup label="euckr" title="EUC-KR Korean">
+<option value="euckr_bin" title="Coreano, binário">euckr_bin</option>
+<option value="euckr_korean_ci" title="Coreano, Indiferente a maiúsculas/minúsculas">euckr_korean_ci</option>
+</optgroup>
+<optgroup label="gb18030" title="China National Standard GB18030">
+<option value="gb18030_bin" title="Chinês, binário">gb18030_bin</option>
+<option value="gb18030_chinese_ci" title="Chinês, Indiferente a maiúsculas/minúsculas">gb18030_chinese_ci</option>
+<option value="gb18030_unicode_520_ci" title="Chinês (UCA 5.2.0), Indiferente a maiúsculas/minúsculas">gb18030_unicode_520_ci</option>
+</optgroup>
+<optgroup label="gb2312" title="GB2312 Simplified Chinese">
+<option value="gb2312_bin" title="Chinês Simplificado, binário">gb2312_bin</option>
+<option value="gb2312_chinese_ci" title="Chinês Simplificado, Indiferente a maiúsculas/minúsculas">gb2312_chinese_ci</option>
+</optgroup>
+<optgroup label="gbk" title="GBK Simplified Chinese">
+<option value="gbk_bin" title="Chinês Simplificado, binário">gbk_bin</option>
+<option value="gbk_chinese_ci" title="Chinês Simplificado, Indiferente a maiúsculas/minúsculas">gbk_chinese_ci</option>
+</optgroup>
+<optgroup label="geostd8" title="GEOSTD8 Georgian">
+<option value="geostd8_bin" title="Georgiano, binário">geostd8_bin</option>
+<option value="geostd8_general_ci" title="Georgiano, Indiferente a maiúsculas/minúsculas">geostd8_general_ci</option>
+</optgroup>
+<optgroup label="greek" title="ISO 8859-7 Greek">
+<option value="greek_bin" title="Grego, binário">greek_bin</option>
+<option value="greek_general_ci" title="Grego, Indiferente a maiúsculas/minúsculas">greek_general_ci</option>
+</optgroup>
+<optgroup label="hebrew" title="ISO 8859-8 Hebrew">
+<option value="hebrew_bin" title="Hebraico, binário">hebrew_bin</option>
+<option value="hebrew_general_ci" title="Hebraico, Indiferente a maiúsculas/minúsculas">hebrew_general_ci</option>
+</optgroup>
+<optgroup label="hp8" title="HP West European">
+<option value="hp8_bin" title="Europa Ocidental, binário">hp8_bin</option>
+<option value="hp8_english_ci" title="Inglês, Indiferente a maiúsculas/minúsculas">hp8_english_ci</option>
+</optgroup>
+<optgroup label="keybcs2" title="DOS Kamenicky Czech-Slovak">
+<option value="keybcs2_bin" title="Checo-Eslovaco, binário">keybcs2_bin</option>
+<option value="keybcs2_general_ci" title="Checo-Eslovaco, Indiferente a maiúsculas/minúsculas">keybcs2_general_ci</option>
+</optgroup>
+<optgroup label="koi8r" title="KOI8-R Relcom Russian">
+<option value="koi8r_bin" title="Russo, binário">koi8r_bin</option>
+<option value="koi8r_general_ci" title="Russo, Indiferente a maiúsculas/minúsculas">koi8r_general_ci</option>
+</optgroup>
+<optgroup label="koi8u" title="KOI8-U Ukrainian">
+<option value="koi8u_bin" title="Ucraniano, binário">koi8u_bin</option>
+<option value="koi8u_general_ci" title="Ucraniano, Indiferente a maiúsculas/minúsculas">koi8u_general_ci</option>
+</optgroup>
+<optgroup label="latin1" title="cp1252 West European">
+<option value="latin1_bin" title="Europa Ocidental, binário">latin1_bin</option>
+<option value="latin1_danish_ci" title="Dinamarquês, Indiferente a maiúsculas/minúsculas">latin1_danish_ci</option>
+<option value="latin1_general_ci" title="Europa Ocidental, Indiferente a maiúsculas/minúsculas">latin1_general_ci</option>
+<option value="latin1_general_cs" title="Europa Ocidental, Sensível a maiúsculas/minúsculas">latin1_general_cs</option>
+<option value="latin1_german1_ci" title="Alemão (ordem de dicionário), Indiferente a maiúsculas/minúsculas">latin1_german1_ci</option>
+<option value="latin1_german2_ci" title="Alemão (ordem de lista telefónica), Indiferente a maiúsculas/minúsculas">latin1_german2_ci</option>
+<option value="latin1_spanish_ci" title="Espanhol (moderno), Indiferente a maiúsculas/minúsculas">latin1_spanish_ci</option>
+<option value="latin1_swedish_ci" title="Sueco, Indiferente a maiúsculas/minúsculas">latin1_swedish_ci</option>
+</optgroup>
+<optgroup label="latin2" title="ISO 8859-2 Central European">
+<option value="latin2_bin" title="Europa Central, binário">latin2_bin</option>
+<option value="latin2_croatian_ci" title="Croata, Indiferente a maiúsculas/minúsculas">latin2_croatian_ci</option>
+<option value="latin2_czech_cs" title="Checo, Sensível a maiúsculas/minúsculas">latin2_czech_cs</option>
+<option value="latin2_general_ci" title="Europa Central, Indiferente a maiúsculas/minúsculas">latin2_general_ci</option>
+<option value="latin2_hungarian_ci" title="Húngaro, Indiferente a maiúsculas/minúsculas">latin2_hungarian_ci</option>
+</optgroup>
+<optgroup label="latin5" title="ISO 8859-9 Turkish">
+<option value="latin5_bin" title="Turco, binário">latin5_bin</option>
+<option value="latin5_turkish_ci" title="Turco, Indiferente a maiúsculas/minúsculas">latin5_turkish_ci</option>
+</optgroup>
+<optgroup label="latin7" title="ISO 8859-13 Baltic">
+<option value="latin7_bin" title="Báltico, binário">latin7_bin</option>
+<option value="latin7_estonian_cs" title="Estoniano, Sensível a maiúsculas/minúsculas">latin7_estonian_cs</option>
+<option value="latin7_general_ci" title="Báltico, Indiferente a maiúsculas/minúsculas">latin7_general_ci</option>
+<option value="latin7_general_cs" title="Báltico, Sensível a maiúsculas/minúsculas">latin7_general_cs</option>
+</optgroup>
+<optgroup label="macce" title="Mac Central European">
+<option value="macce_bin" title="Europa Central, binário">macce_bin</option>
+<option value="macce_general_ci" title="Europa Central, Indiferente a maiúsculas/minúsculas">macce_general_ci</option>
+</optgroup>
+<optgroup label="macroman" title="Mac West European">
+<option value="macroman_bin" title="Europa Ocidental, binário">macroman_bin</option>
+<option value="macroman_general_ci" title="Europa Ocidental, Indiferente a maiúsculas/minúsculas">macroman_general_ci</option>
+</optgroup>
+<optgroup label="sjis" title="Shift-JIS Japanese">
+<option value="sjis_bin" title="Japonês, binário">sjis_bin</option>
+<option value="sjis_japanese_ci" title="Japonês, Indiferente a maiúsculas/minúsculas">sjis_japanese_ci</option>
+</optgroup>
+<optgroup label="swe7" title="7bit Swedish">
+<option value="swe7_bin" title="Sueco, binário">swe7_bin</option>
+<option value="swe7_swedish_ci" title="Sueco, Indiferente a maiúsculas/minúsculas">swe7_swedish_ci</option>
+</optgroup>
+<optgroup label="tis620" title="TIS620 Thai">
+<option value="tis620_bin" title="Tailandês, binário">tis620_bin</option>
+<option value="tis620_thai_ci" title="Tailandês, Indiferente a maiúsculas/minúsculas">tis620_thai_ci</option>
+</optgroup>
+<optgroup label="ucs2" title="UCS-2 Unicode">
+<option value="ucs2_bin" title="Unicode, binário">ucs2_bin</option>
+<option value="ucs2_croatian_ci" title="Croata, Indiferente a maiúsculas/minúsculas">ucs2_croatian_ci</option>
+<option value="ucs2_czech_ci" title="Checo, Indiferente a maiúsculas/minúsculas">ucs2_czech_ci</option>
+<option value="ucs2_danish_ci" title="Dinamarquês, Indiferente a maiúsculas/minúsculas">ucs2_danish_ci</option>
+<option value="ucs2_esperanto_ci" title="Esperanto, Indiferente a maiúsculas/minúsculas">ucs2_esperanto_ci</option>
+<option value="ucs2_estonian_ci" title="Estoniano, Indiferente a maiúsculas/minúsculas">ucs2_estonian_ci</option>
+<option value="ucs2_general_ci" title="Unicode, Indiferente a maiúsculas/minúsculas">ucs2_general_ci</option>
+<option value="ucs2_general_mysql500_ci" title="Unicode (MySQL 5.0.0), Indiferente a maiúsculas/minúsculas">ucs2_general_mysql500_ci</option>
+<option value="ucs2_german2_ci" title="Alemão (ordem de lista telefónica), Indiferente a maiúsculas/minúsculas">ucs2_german2_ci</option>
+<option value="ucs2_hungarian_ci" title="Húngaro, Indiferente a maiúsculas/minúsculas">ucs2_hungarian_ci</option>
+<option value="ucs2_icelandic_ci" title="Islandês, Indiferente a maiúsculas/minúsculas">ucs2_icelandic_ci</option>
+<option value="ucs2_latvian_ci" title="Letão, Indiferente a maiúsculas/minúsculas">ucs2_latvian_ci</option>
+<option value="ucs2_lithuanian_ci" title="Lituano, Indiferente a maiúsculas/minúsculas">ucs2_lithuanian_ci</option>
+<option value="ucs2_persian_ci" title="Persa, Indiferente a maiúsculas/minúsculas">ucs2_persian_ci</option>
+<option value="ucs2_polish_ci" title="Polaco, Indiferente a maiúsculas/minúsculas">ucs2_polish_ci</option>
+<option value="ucs2_roman_ci" title="Europa Ocidental, Indiferente a maiúsculas/minúsculas">ucs2_roman_ci</option>
+<option value="ucs2_romanian_ci" title="Romeno, Indiferente a maiúsculas/minúsculas">ucs2_romanian_ci</option>
+<option value="ucs2_sinhala_ci" title="Cingalês, Indiferente a maiúsculas/minúsculas">ucs2_sinhala_ci</option>
+<option value="ucs2_slovak_ci" title="Eslovaco, Indiferente a maiúsculas/minúsculas">ucs2_slovak_ci</option>
+<option value="ucs2_slovenian_ci" title="Esloveno, Indiferente a maiúsculas/minúsculas">ucs2_slovenian_ci</option>
+<option value="ucs2_spanish2_ci" title="Espanhol (tradicional), Indiferente a maiúsculas/minúsculas">ucs2_spanish2_ci</option>
+<option value="ucs2_spanish_ci" title="Espanhol (moderno), Indiferente a maiúsculas/minúsculas">ucs2_spanish_ci</option>
+<option value="ucs2_swedish_ci" title="Sueco, Indiferente a maiúsculas/minúsculas">ucs2_swedish_ci</option>
+<option value="ucs2_turkish_ci" title="Turco, Indiferente a maiúsculas/minúsculas">ucs2_turkish_ci</option>
+<option value="ucs2_unicode_520_ci" title="Unicode (UCA 5.2.0), Indiferente a maiúsculas/minúsculas">ucs2_unicode_520_ci</option>
+<option value="ucs2_unicode_ci" title="Unicode, Indiferente a maiúsculas/minúsculas">ucs2_unicode_ci</option>
+<option value="ucs2_vietnamese_ci" title="Vietnamita, Indiferente a maiúsculas/minúsculas">ucs2_vietnamese_ci</option>
+</optgroup>
+<optgroup label="ujis" title="EUC-JP Japanese">
+<option value="ujis_bin" title="Japonês, binário">ujis_bin</option>
+<option value="ujis_japanese_ci" title="Japonês, Indiferente a maiúsculas/minúsculas">ujis_japanese_ci</option>
+</optgroup>
+<optgroup label="utf16" title="UTF-16 Unicode">
+<option value="utf16_bin" title="Unicode, binário">utf16_bin</option>
+<option value="utf16_croatian_ci" title="Croata, Indiferente a maiúsculas/minúsculas">utf16_croatian_ci</option>
+<option value="utf16_czech_ci" title="Checo, Indiferente a maiúsculas/minúsculas">utf16_czech_ci</option>
+<option value="utf16_danish_ci" title="Dinamarquês, Indiferente a maiúsculas/minúsculas">utf16_danish_ci</option>
+<option value="utf16_esperanto_ci" title="Esperanto, Indiferente a maiúsculas/minúsculas">utf16_esperanto_ci</option>
+<option value="utf16_estonian_ci" title="Estoniano, Indiferente a maiúsculas/minúsculas">utf16_estonian_ci</option>
+<option value="utf16_general_ci" title="Unicode, Indiferente a maiúsculas/minúsculas">utf16_general_ci</option>
+<option value="utf16_german2_ci" title="Alemão (ordem de lista telefónica), Indiferente a maiúsculas/minúsculas">utf16_german2_ci</option>
+<option value="utf16_hungarian_ci" title="Húngaro, Indiferente a maiúsculas/minúsculas">utf16_hungarian_ci</option>
+<option value="utf16_icelandic_ci" title="Islandês, Indiferente a maiúsculas/minúsculas">utf16_icelandic_ci</option>
+<option value="utf16_latvian_ci" title="Letão, Indiferente a maiúsculas/minúsculas">utf16_latvian_ci</option>
+<option value="utf16_lithuanian_ci" title="Lituano, Indiferente a maiúsculas/minúsculas">utf16_lithuanian_ci</option>
+<option value="utf16_persian_ci" title="Persa, Indiferente a maiúsculas/minúsculas">utf16_persian_ci</option>
+<option value="utf16_polish_ci" title="Polaco, Indiferente a maiúsculas/minúsculas">utf16_polish_ci</option>
+<option value="utf16_roman_ci" title="Europa Ocidental, Indiferente a maiúsculas/minúsculas">utf16_roman_ci</option>
+<option value="utf16_romanian_ci" title="Romeno, Indiferente a maiúsculas/minúsculas">utf16_romanian_ci</option>
+<option value="utf16_sinhala_ci" title="Cingalês, Indiferente a maiúsculas/minúsculas">utf16_sinhala_ci</option>
+<option value="utf16_slovak_ci" title="Eslovaco, Indiferente a maiúsculas/minúsculas">utf16_slovak_ci</option>
+<option value="utf16_slovenian_ci" title="Esloveno, Indiferente a maiúsculas/minúsculas">utf16_slovenian_ci</option>
+<option value="utf16_spanish2_ci" title="Espanhol (tradicional), Indiferente a maiúsculas/minúsculas">utf16_spanish2_ci</option>
+<option value="utf16_spanish_ci" title="Espanhol (moderno), Indiferente a maiúsculas/minúsculas">utf16_spanish_ci</option>
+<option value="utf16_swedish_ci" title="Sueco, Indiferente a maiúsculas/minúsculas">utf16_swedish_ci</option>
+<option value="utf16_turkish_ci" title="Turco, Indiferente a maiúsculas/minúsculas">utf16_turkish_ci</option>
+<option value="utf16_unicode_520_ci" title="Unicode (UCA 5.2.0), Indiferente a maiúsculas/minúsculas">utf16_unicode_520_ci</option>
+<option value="utf16_unicode_ci" title="Unicode, Indiferente a maiúsculas/minúsculas">utf16_unicode_ci</option>
+<option value="utf16_vietnamese_ci" title="Vietnamita, Indiferente a maiúsculas/minúsculas">utf16_vietnamese_ci</option>
+</optgroup>
+<optgroup label="utf16le" title="UTF-16LE Unicode">
+<option value="utf16le_bin" title="Unicode, binário">utf16le_bin</option>
+<option value="utf16le_general_ci" title="Unicode, Indiferente a maiúsculas/minúsculas">utf16le_general_ci</option>
+</optgroup>
+<optgroup label="utf32" title="UTF-32 Unicode">
+<option value="utf32_bin" title="Unicode, binário">utf32_bin</option>
+<option value="utf32_croatian_ci" title="Croata, Indiferente a maiúsculas/minúsculas">utf32_croatian_ci</option>
+<option value="utf32_czech_ci" title="Checo, Indiferente a maiúsculas/minúsculas">utf32_czech_ci</option>
+<option value="utf32_danish_ci" title="Dinamarquês, Indiferente a maiúsculas/minúsculas">utf32_danish_ci</option>
+<option value="utf32_esperanto_ci" title="Esperanto, Indiferente a maiúsculas/minúsculas">utf32_esperanto_ci</option>
+<option value="utf32_estonian_ci" title="Estoniano, Indiferente a maiúsculas/minúsculas">utf32_estonian_ci</option>
+<option value="utf32_general_ci" title="Unicode, Indiferente a maiúsculas/minúsculas">utf32_general_ci</option>
+<option value="utf32_german2_ci" title="Alemão (ordem de lista telefónica), Indiferente a maiúsculas/minúsculas">utf32_german2_ci</option>
+<option value="utf32_hungarian_ci" title="Húngaro, Indiferente a maiúsculas/minúsculas">utf32_hungarian_ci</option>
+<option value="utf32_icelandic_ci" title="Islandês, Indiferente a maiúsculas/minúsculas">utf32_icelandic_ci</option>
+<option value="utf32_latvian_ci" title="Letão, Indiferente a maiúsculas/minúsculas">utf32_latvian_ci</option>
+<option value="utf32_lithuanian_ci" title="Lituano, Indiferente a maiúsculas/minúsculas">utf32_lithuanian_ci</option>
+<option value="utf32_persian_ci" title="Persa, Indiferente a maiúsculas/minúsculas">utf32_persian_ci</option>
+<option value="utf32_polish_ci" title="Polaco, Indiferente a maiúsculas/minúsculas">utf32_polish_ci</option>
+<option value="utf32_roman_ci" title="Europa Ocidental, Indiferente a maiúsculas/minúsculas">utf32_roman_ci</option>
+<option value="utf32_romanian_ci" title="Romeno, Indiferente a maiúsculas/minúsculas">utf32_romanian_ci</option>
+<option value="utf32_sinhala_ci" title="Cingalês, Indiferente a maiúsculas/minúsculas">utf32_sinhala_ci</option>
+<option value="utf32_slovak_ci" title="Eslovaco, Indiferente a maiúsculas/minúsculas">utf32_slovak_ci</option>
+<option value="utf32_slovenian_ci" title="Esloveno, Indiferente a maiúsculas/minúsculas">utf32_slovenian_ci</option>
+<option value="utf32_spanish2_ci" title="Espanhol (tradicional), Indiferente a maiúsculas/minúsculas">utf32_spanish2_ci</option>
+<option value="utf32_spanish_ci" title="Espanhol (moderno), Indiferente a maiúsculas/minúsculas">utf32_spanish_ci</option>
+<option value="utf32_swedish_ci" title="Sueco, Indiferente a maiúsculas/minúsculas">utf32_swedish_ci</option>
+<option value="utf32_turkish_ci" title="Turco, Indiferente a maiúsculas/minúsculas">utf32_turkish_ci</option>
+<option value="utf32_unicode_520_ci" title="Unicode (UCA 5.2.0), Indiferente a maiúsculas/minúsculas">utf32_unicode_520_ci</option>
+<option value="utf32_unicode_ci" title="Unicode, Indiferente a maiúsculas/minúsculas">utf32_unicode_ci</option>
+<option value="utf32_vietnamese_ci" title="Vietnamita, Indiferente a maiúsculas/minúsculas">utf32_vietnamese_ci</option>
+</optgroup>
+<optgroup label="utf8mb3" title="UTF-8 Unicode">
+<option value="utf8mb3_bin" title="Desconhecido, binário">utf8mb3_bin</option>
+<option value="utf8mb3_croatian_ci" title="Croata, Indiferente a maiúsculas/minúsculas">utf8mb3_croatian_ci</option>
+<option value="utf8mb3_czech_ci" title="Checo, Indiferente a maiúsculas/minúsculas">utf8mb3_czech_ci</option>
+<option value="utf8mb3_danish_ci" title="Dinamarquês, Indiferente a maiúsculas/minúsculas">utf8mb3_danish_ci</option>
+<option value="utf8mb3_esperanto_ci" title="Esperanto, Indiferente a maiúsculas/minúsculas">utf8mb3_esperanto_ci</option>
+<option value="utf8mb3_estonian_ci" title="Estoniano, Indiferente a maiúsculas/minúsculas">utf8mb3_estonian_ci</option>
+<option value="utf8mb3_general_ci" title="Desconhecido, Indiferente a maiúsculas/minúsculas">utf8mb3_general_ci</option>
+<option value="utf8mb3_general_mysql500_ci" title="Desconhecido (MySQL 5.0.0), Indiferente a maiúsculas/minúsculas">utf8mb3_general_mysql500_ci</option>
+<option value="utf8mb3_german2_ci" title="Alemão (ordem de lista telefónica), Indiferente a maiúsculas/minúsculas">utf8mb3_german2_ci</option>
+<option value="utf8mb3_hungarian_ci" title="Húngaro, Indiferente a maiúsculas/minúsculas">utf8mb3_hungarian_ci</option>
+<option value="utf8mb3_icelandic_ci" title="Islandês, Indiferente a maiúsculas/minúsculas">utf8mb3_icelandic_ci</option>
+<option value="utf8mb3_latvian_ci" title="Letão, Indiferente a maiúsculas/minúsculas">utf8mb3_latvian_ci</option>
+<option value="utf8mb3_lithuanian_ci" title="Lituano, Indiferente a maiúsculas/minúsculas">utf8mb3_lithuanian_ci</option>
+<option value="utf8mb3_persian_ci" title="Persa, Indiferente a maiúsculas/minúsculas">utf8mb3_persian_ci</option>
+<option value="utf8mb3_polish_ci" title="Polaco, Indiferente a maiúsculas/minúsculas">utf8mb3_polish_ci</option>
+<option value="utf8mb3_roman_ci" title="Europa Ocidental, Indiferente a maiúsculas/minúsculas">utf8mb3_roman_ci</option>
+<option value="utf8mb3_romanian_ci" title="Romeno, Indiferente a maiúsculas/minúsculas">utf8mb3_romanian_ci</option>
+<option value="utf8mb3_sinhala_ci" title="Cingalês, Indiferente a maiúsculas/minúsculas">utf8mb3_sinhala_ci</option>
+<option value="utf8mb3_slovak_ci" title="Eslovaco, Indiferente a maiúsculas/minúsculas">utf8mb3_slovak_ci</option>
+<option value="utf8mb3_slovenian_ci" title="Esloveno, Indiferente a maiúsculas/minúsculas">utf8mb3_slovenian_ci</option>
+<option value="utf8mb3_spanish2_ci" title="Espanhol (tradicional), Indiferente a maiúsculas/minúsculas">utf8mb3_spanish2_ci</option>
+<option value="utf8mb3_spanish_ci" title="Espanhol (moderno), Indiferente a maiúsculas/minúsculas">utf8mb3_spanish_ci</option>
+<option value="utf8mb3_swedish_ci" title="Sueco, Indiferente a maiúsculas/minúsculas">utf8mb3_swedish_ci</option>
+<option value="utf8mb3_tolower_ci" title="Desconhecido, Indiferente a maiúsculas/minúsculas">utf8mb3_tolower_ci</option>
+<option value="utf8mb3_turkish_ci" title="Turco, Indiferente a maiúsculas/minúsculas">utf8mb3_turkish_ci</option>
+<option value="utf8mb3_unicode_520_ci" title="Unicode (UCA 5.2.0), Indiferente a maiúsculas/minúsculas">utf8mb3_unicode_520_ci</option>
+<option value="utf8mb3_unicode_ci" title="Unicode, Indiferente a maiúsculas/minúsculas">utf8mb3_unicode_ci</option>
+<option value="utf8mb3_vietnamese_ci" title="Vietnamita, Indiferente a maiúsculas/minúsculas">utf8mb3_vietnamese_ci</option>
+</optgroup>
+<optgroup label="utf8mb4" title="UTF-8 Unicode">
+<option value="utf8mb4_0900_ai_ci" title="Unicode (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas" selected="selected">utf8mb4_0900_ai_ci</option>
+<option value="utf8mb4_0900_as_ci" title="Unicode (UCA 9.0.0), Sensível aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_0900_as_ci</option>
+<option value="utf8mb4_0900_as_cs" title="Unicode (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_0900_as_cs</option>
+<option value="utf8mb4_0900_bin" title="Unicode (UCA 9.0.0), binário">utf8mb4_0900_bin</option>
+<option value="utf8mb4_bg_0900_ai_ci" title="Búlgaro (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_bg_0900_ai_ci</option>
+<option value="utf8mb4_bg_0900_as_cs" title="Búlgaro (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_bg_0900_as_cs</option>
+<option value="utf8mb4_bin" title="Unicode (UCA 4.0.0), binário">utf8mb4_bin</option>
+<option value="utf8mb4_bs_0900_ai_ci" title="Unicode (UCA 4.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_bs_0900_ai_ci</option>
+<option value="utf8mb4_bs_0900_as_cs" title="Unicode (UCA 4.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_bs_0900_as_cs</option>
+<option value="utf8mb4_croatian_ci" title="Croata (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_croatian_ci</option>
+<option value="utf8mb4_cs_0900_ai_ci" title="Checo (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_cs_0900_ai_ci</option>
+<option value="utf8mb4_cs_0900_as_cs" title="Checo (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_cs_0900_as_cs</option>
+<option value="utf8mb4_czech_ci" title="Checo (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_czech_ci</option>
+<option value="utf8mb4_da_0900_ai_ci" title="Dinamarquês (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_da_0900_ai_ci</option>
+<option value="utf8mb4_da_0900_as_cs" title="Dinamarquês (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_da_0900_as_cs</option>
+<option value="utf8mb4_danish_ci" title="Dinamarquês (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_danish_ci</option>
+<option value="utf8mb4_de_pb_0900_ai_ci" title="Alemão (ordem de lista telefónica) (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_de_pb_0900_ai_ci</option>
+<option value="utf8mb4_de_pb_0900_as_cs" title="Alemão (ordem de lista telefónica) (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_de_pb_0900_as_cs</option>
+<option value="utf8mb4_eo_0900_ai_ci" title="Esperanto (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_eo_0900_ai_ci</option>
+<option value="utf8mb4_eo_0900_as_cs" title="Esperanto (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_eo_0900_as_cs</option>
+<option value="utf8mb4_es_0900_ai_ci" title="Espanhol (moderno) (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_es_0900_ai_ci</option>
+<option value="utf8mb4_es_0900_as_cs" title="Espanhol (moderno) (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_es_0900_as_cs</option>
+<option value="utf8mb4_es_trad_0900_ai_ci" title="Espanhol (tradicional) (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_es_trad_0900_ai_ci</option>
+<option value="utf8mb4_es_trad_0900_as_cs" title="Espanhol (tradicional) (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_es_trad_0900_as_cs</option>
+<option value="utf8mb4_esperanto_ci" title="Esperanto (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_esperanto_ci</option>
+<option value="utf8mb4_estonian_ci" title="Estoniano (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_estonian_ci</option>
+<option value="utf8mb4_et_0900_ai_ci" title="Estoniano (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_et_0900_ai_ci</option>
+<option value="utf8mb4_et_0900_as_cs" title="Estoniano (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_et_0900_as_cs</option>
+<option value="utf8mb4_general_ci" title="Unicode (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_general_ci</option>
+<option value="utf8mb4_german2_ci" title="Alemão (ordem de lista telefónica) (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_german2_ci</option>
+<option value="utf8mb4_gl_0900_ai_ci" title="Unicode (UCA 4.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_gl_0900_ai_ci</option>
+<option value="utf8mb4_gl_0900_as_cs" title="Unicode (UCA 4.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_gl_0900_as_cs</option>
+<option value="utf8mb4_hr_0900_ai_ci" title="Croata (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_hr_0900_ai_ci</option>
+<option value="utf8mb4_hr_0900_as_cs" title="Croata (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_hr_0900_as_cs</option>
+<option value="utf8mb4_hu_0900_ai_ci" title="Húngaro (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_hu_0900_ai_ci</option>
+<option value="utf8mb4_hu_0900_as_cs" title="Húngaro (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_hu_0900_as_cs</option>
+<option value="utf8mb4_hungarian_ci" title="Húngaro (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_hungarian_ci</option>
+<option value="utf8mb4_icelandic_ci" title="Islandês (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_icelandic_ci</option>
+<option value="utf8mb4_is_0900_ai_ci" title="Islandês (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_is_0900_ai_ci</option>
+<option value="utf8mb4_is_0900_as_cs" title="Islandês (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_is_0900_as_cs</option>
+<option value="utf8mb4_ja_0900_as_cs" title="Japonês (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_ja_0900_as_cs</option>
+<option value="utf8mb4_ja_0900_as_cs_ks" title="Japonês (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas, Sensível ao kana">utf8mb4_ja_0900_as_cs_ks</option>
+<option value="utf8mb4_la_0900_ai_ci" title="Latim Clássico (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_la_0900_ai_ci</option>
+<option value="utf8mb4_la_0900_as_cs" title="Latim Clássico (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_la_0900_as_cs</option>
+<option value="utf8mb4_latvian_ci" title="Letão (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_latvian_ci</option>
+<option value="utf8mb4_lithuanian_ci" title="Lituano (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_lithuanian_ci</option>
+<option value="utf8mb4_lt_0900_ai_ci" title="Lituano (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_lt_0900_ai_ci</option>
+<option value="utf8mb4_lt_0900_as_cs" title="Lituano (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_lt_0900_as_cs</option>
+<option value="utf8mb4_lv_0900_ai_ci" title="Letão (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_lv_0900_ai_ci</option>
+<option value="utf8mb4_lv_0900_as_cs" title="Letão (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_lv_0900_as_cs</option>
+<option value="utf8mb4_mn_cyrl_0900_ai_ci" title="Unicode (UCA 4.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_mn_cyrl_0900_ai_ci</option>
+<option value="utf8mb4_mn_cyrl_0900_as_cs" title="Unicode (UCA 4.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_mn_cyrl_0900_as_cs</option>
+<option value="utf8mb4_nb_0900_ai_ci" title="Unicode (UCA 4.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_nb_0900_ai_ci</option>
+<option value="utf8mb4_nb_0900_as_cs" title="Unicode (UCA 4.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_nb_0900_as_cs</option>
+<option value="utf8mb4_nn_0900_ai_ci" title="Unicode (UCA 4.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_nn_0900_ai_ci</option>
+<option value="utf8mb4_nn_0900_as_cs" title="Unicode (UCA 4.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_nn_0900_as_cs</option>
+<option value="utf8mb4_persian_ci" title="Persa (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_persian_ci</option>
+<option value="utf8mb4_pl_0900_ai_ci" title="Polaco (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_pl_0900_ai_ci</option>
+<option value="utf8mb4_pl_0900_as_cs" title="Polaco (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_pl_0900_as_cs</option>
+<option value="utf8mb4_polish_ci" title="Polaco (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_polish_ci</option>
+<option value="utf8mb4_ro_0900_ai_ci" title="Romeno (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_ro_0900_ai_ci</option>
+<option value="utf8mb4_ro_0900_as_cs" title="Romeno (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_ro_0900_as_cs</option>
+<option value="utf8mb4_roman_ci" title="Europa Ocidental (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_roman_ci</option>
+<option value="utf8mb4_romanian_ci" title="Romeno (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_romanian_ci</option>
+<option value="utf8mb4_ru_0900_ai_ci" title="Russo (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_ru_0900_ai_ci</option>
+<option value="utf8mb4_ru_0900_as_cs" title="Russo (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_ru_0900_as_cs</option>
+<option value="utf8mb4_sinhala_ci" title="Cingalês (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_sinhala_ci</option>
+<option value="utf8mb4_sk_0900_ai_ci" title="Eslovaco (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_sk_0900_ai_ci</option>
+<option value="utf8mb4_sk_0900_as_cs" title="Eslovaco (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_sk_0900_as_cs</option>
+<option value="utf8mb4_sl_0900_ai_ci" title="Esloveno (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_sl_0900_ai_ci</option>
+<option value="utf8mb4_sl_0900_as_cs" title="Esloveno (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_sl_0900_as_cs</option>
+<option value="utf8mb4_slovak_ci" title="Eslovaco (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_slovak_ci</option>
+<option value="utf8mb4_slovenian_ci" title="Esloveno (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_slovenian_ci</option>
+<option value="utf8mb4_spanish2_ci" title="Espanhol (tradicional) (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_spanish2_ci</option>
+<option value="utf8mb4_spanish_ci" title="Espanhol (moderno) (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_spanish_ci</option>
+<option value="utf8mb4_sr_latn_0900_ai_ci" title="Unicode (UCA 4.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_sr_latn_0900_ai_ci</option>
+<option value="utf8mb4_sr_latn_0900_as_cs" title="Unicode (UCA 4.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_sr_latn_0900_as_cs</option>
+<option value="utf8mb4_sv_0900_ai_ci" title="Sueco (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_sv_0900_ai_ci</option>
+<option value="utf8mb4_sv_0900_as_cs" title="Sueco (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_sv_0900_as_cs</option>
+<option value="utf8mb4_swedish_ci" title="Sueco (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_swedish_ci</option>
+<option value="utf8mb4_tr_0900_ai_ci" title="Turco (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_tr_0900_ai_ci</option>
+<option value="utf8mb4_tr_0900_as_cs" title="Turco (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_tr_0900_as_cs</option>
+<option value="utf8mb4_turkish_ci" title="Turco (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_turkish_ci</option>
+<option value="utf8mb4_unicode_520_ci" title="Unicode (UCA 5.2.0), Indiferente a maiúsculas/minúsculas">utf8mb4_unicode_520_ci</option>
+<option value="utf8mb4_unicode_ci" title="Unicode (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_unicode_ci</option>
+<option value="utf8mb4_vi_0900_ai_ci" title="Vietnamita (UCA 9.0.0), Indiferente aos acentos, Indiferente a maiúsculas/minúsculas">utf8mb4_vi_0900_ai_ci</option>
+<option value="utf8mb4_vi_0900_as_cs" title="Vietnamita (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_vi_0900_as_cs</option>
+<option value="utf8mb4_vietnamese_ci" title="Vietnamita (UCA 4.0.0), Indiferente a maiúsculas/minúsculas">utf8mb4_vietnamese_ci</option>
+<option value="utf8mb4_zh_0900_as_cs" title="Chinês (UCA 9.0.0), Sensível aos acentos, Sensível a maiúsculas/minúsculas">utf8mb4_zh_0900_as_cs</option>
+</optgroup>
+</select>
+
+    </td>
+<td class="center">
+            <select name="field_attribute[0]" id="field_0_6">
+                <option value="" selected="selected">
+            
+        </option>
+            <option value="BINARY">
+            BINARY
+        </option>
+            <option value="UNSIGNED">
+            UNSIGNED
+        </option>
+            <option value="UNSIGNED ZEROFILL">
+            UNSIGNED ZEROFILL
+        </option>
+            <option value="on update CURRENT_TIMESTAMP">
+            on update CURRENT_TIMESTAMP
+        </option>
+    </select>
+    </td>
+<td class="center">
+        <input name="field_null[0]" id="field_0_7" type="checkbox" value="YES" class="allow_null">
+    </td>
+<td class="center">
+        <input name="field_extra[0]" id="field_0_8" type="checkbox" value="AUTO_INCREMENT">
+    </td>
+<td class="center">
+        <input id="field_0_9" type="text" name="field_comments[0]" size="12" maxlength="1024" value="1 - Ativado 2- Desativado" class="textfield">
+    </td>
+     <td class="center">
+        <select name="field_virtuality[0]" id="field_0_10" class="virtuality">
+            <option value="" selected="selected">
+            
+        </option>
+            <option value="VIRTUAL">
+            VIRTUAL
+        </option>
+            <option value="STORED">
+            STORED
+        </option>
+    </select>
+
+    <input type="text" name="field_expression[0]" size="12" placeholder="Expressão" class="textfield expression" style="display: none;">
+            </td>
+                                                                              
+    <td class="center">
+        <select id="field_0_11" name="field_move_to[0]" size="1" width="5em">
+    <option value="" selected="selected">&nbsp;</option>
+    <option value="-first">
+        primeiro    </option>
+            <option value="id">
+            após `id`
+        </option>
+            <option value="idUsuario">
+            após `idUsuario`
+        </option>
+            <option value="atividade" disabled="disabled">
+            após `atividade`
+        </option>
+            <option value="status" disabled="disabled">
+            após `status`
+        </option>
+    </select>
+            </td>
+
+    <td class="center">
+                <select id="field_0_12" size="1" name="field_mimetype[0]">
+    <option value="" selected="selected">&nbsp;</option>
+                                    <option value="Image_JPEG">
+                image/jpeg
+            </option>
+                                <option value="Text_Plain">
+                text/plain
+            </option>
+                                <option value="Application_Octetstream">
+                application/octetstream
+            </option>
+                                <option value="Image_PNG">
+                image/png
+            </option>
+                                <option value="Text_Octetstream">
+                text/octetstream
+            </option>
+            </select>
+            </td>
+    <td class="center">
+                <select id="field_0_13" size="1" name="field_transformation[0]">
+    <option value="" title="Nenhum" selected="selected"></option>
+                                                                        <option value="Output/Application_Octetstream_Download.php" title="Mostrar um link para descarregar os dados binários da coluna. Você pode usar a primeira opção para especificar o nome do ficheiro ou usar a segunda opção como o nome de uma coluna que contém o nome do ficheiro. Se usar a segunda opção, terá de configurar a primeira opção com uma cadeia vazia.">
+                Download (application/octetstream: Download)
+            </option>
+                                                                    <option value="Output/Application_Octetstream_Hex.php" title="Exibir a representação hexadecimal dos dados. O primeiro parâmetro opcional especifica a frequencia de espaços adicionados (predefinição são 2 pedaços).">
+                Hex (application/octetstream: Hex)
+            </option>
+                                                                    <option value="Output/Image_JPEG_Inline.php" title="Mostra uma miniatura clicável. As opções são largura e altura máximas em pixeis. A proporção original é preservada.">
+                Inline (image/jpeg: Inline)
+            </option>
+                                                                    <option value="Output/Image_JPEG_Link.php" title="Mostra uma ligação para esta imagem (blob download directo , i.e.).">
+                ImageLink (image/jpeg: Link)
+            </option>
+                                                                    <option value="Output/Image_PNG_Inline.php" title="Mostra uma miniatura clicável. As opções são largura e altura máximas em pixeis. A proporção original é preservada.">
+                Inline (image/png: Inline)
+            </option>
+                                                                    <option value="Output/Text_Octetstream_Sql.php" title="Formatar texto como consulta SQL com destaque de sintaxe.">
+                SQL (text/octetstream: Sql)
+            </option>
+                                                                    <option value="Output/Text_Plain_Binarytoip.php" title="Converte um endereço de IP, armazenado como cadiea binária, numa cadeia formatada conforme a referência de Internet (IPv4/IPv6).">
+                Binary To IPv4/IPv6 (text/plain: Binarytoip)
+            </option>
+                                                                    <option value="Output/Text_Plain_Bool2Text.php" title="Converte valores booleanos em texto (default 'T' e 'F'). Primeira opção é TRUE, segunda FALSE. Não nulo=true.">
+                Bool2Text (text/plain: Bool2Text)
+            </option>
+                                                                    <option value="Output/Text_Plain_Dateformat.php" title="Exibir uma coluna TIME, TIMESTAMP, DATETIME ou campo numérico UNIX como data formatada. A primeira opção é o deslocamento (em horas) que irá ser adicionado ao timestamp (predefinição: 0). Use a segunda opção para especificar uma cadeia de formatação date/time diferente. A terceira opção determina se você deseja ver a data local ou UTC (use a string &quot;local&quot; ou &quot;utc&quot; para isso). De acordo com isso, o formato de data terá valores diferentes - para &quot;local&quot; veja a documentação do PHP para função strftime() e para &quot;utc&quot; será feito pela função gmdate().">
+                Date Format (text/plain: Dateformat)
+            </option>
+                                                                    <option value="Output/Text_Plain_External.php" title="LINUX ONLY: Launches an external application and feeds it the column data via standard input. Returns the standard output of the application. The default is Tidy, to pretty-print HTML code. For security reasons, you have to manually edit the file libraries/classes/Plugins/Transformations/Abs/ExternalTransformationsPlugin.php and list the tools you want to make available. The first option is then the number of the program you want to use. The second option should be blank for historical reasons. The third option, if set to 1, will convert the output using htmlspecialchars() (Default 1). The fourth option, if set to 1, will prevent wrapping and ensure that the output appears all on one line (Default 1).">
+                External (text/plain: External)
+            </option>
+                                                                    <option value="Output/Text_Plain_Formatted.php" title="Mostra o conteúdo da coluna como ele é, sem manipular através de htmlspecialchars(). Isso é, a coluna assume conter somente HTML válido.">
+                Formatted (text/plain: Formatted)
+            </option>
+                                                                    <option value="Output/Text_Plain_Imagelink.php" title="Mostra uma imagem e um link; o campo contém o nome do ficheiro. A primeira opção é um prefixo de URL como &quot;https://www.exemplo.com/&quot;. A segunda e terceira opção são a largura e a altura em pixels.">
+                Image Link (text/plain: Imagelink)
+            </option>
+                                                                    <option value="Output/Text_Plain_Json.php" title="Formata o texto como JSON com sintaxe destacada.">
+                JSON (text/plain: Json)
+            </option>
+                                                                    <option value="Output/Text_Plain_Sql.php" title="Formatar texto como consulta SQL com destaque de sintaxe.">
+                SQL (text/plain: Sql)
+            </option>
+                                                                    <option value="Output/Text_Plain_Xml.php" title="Formata o texto como XML com sintaxe destacada.">
+                XML (text/plain: Xml)
+            </option>
+                                                                    <option value="Text_Plain_Link.php" title="Mostra um link, o campo contém o nome do ficheiro. A primeira opção é um prefixo URL como &quot;https://www.exemplo.com/&quot;. A segunda opção é um título para o link.">
+                TextLink (text/plain: Link)
+            </option>
+                                                                    <option value="Text_Plain_Longtoipv4.php" title="Converte um endereço de IP (IPv4), armazenado como BIGINT, em uma cadeia formatada com pontuação de referência de Internet.">
+                Long To IPv4 (text/plain: Longtoipv4)
+            </option>
+                                                                    <option value="Text_Plain_PreApPend.php" title="Adiciona texto a uma cadeia. A primeira opção é o texto a ser prefixado, a segunda é sufixado (envolvido por aspas simples, cadeia vazia por predefinição).">
+                PreApPend (text/plain: PreApPend)
+            </option>
+                                                                    <option value="Text_Plain_Substring.php" title="Mostra uma parte de uma cadeia. A primeira opção é a quantidade de caracteres a pular a partir do início da cadeia. (A predefinição é 0). A segunda opção é a quantidade de caracteres a retornar (Predefinição: até o fim da cadeia). A terceira opção é a cadiea a adicionar depois ou antes quando truncamentos ocorrerem (Predefinição: &quot;...&quot;).">
+                Substring (text/plain: Substring)
+            </option>
+            </select>
+            </td>
+    <td class="center">
+                <input id="field_0_14" type="text" name="field_transformation_options[0]" size="16" class="textfield">
+            </td>
+    <td class="center">
+                <select id="field_0_15" size="1" name="field_input_transformation[0]">
+    <option value="" title="Nenhum" selected="selected"></option>
+                                                                        <option value="Input/Image_JPEG_Upload.php" title="Funcionalidade de envio de imagem que também exibe uma miniatura. As opções são a largura e a altura da miniatura em pixels. Predefinição é 100 X 100.">
+                Image upload (image/jpeg: Upload)
+            </option>
+                                                                    <option value="Input/Text_Plain_FileUpload.php" title="Funcionalidade de envio de ficheiros para colunas tipo TEXT. Não tem uma textarea para a entrada.">
+                Text file upload (text/plain: FileUpload)
+            </option>
+                                                                    <option value="Input/Text_Plain_Iptobinary.php" title="Converte um endereço de internet no formato (IPv4/IPv6) em binário">
+                IPv4/IPv6 To Binary (text/plain: Iptobinary)
+            </option>
+                                                                    <option value="Input/Text_Plain_JsonEditor.php" title="Editor de sintaxe destacada de CodeMirror para JSON.">
+                JSON (text/plain: JsonEditor)
+            </option>
+                                                                    <option value="Input/Text_Plain_RegexValidation.php" title="Valida a cadeia de caracteres utilizando expressões regulares e executa a inserção somente se a seqüência de caracteres corresponde. A primeira opção é a Expressão Regular.">
+                Regex Validation (text/plain: RegexValidation)
+            </option>
+                                                                    <option value="Input/Text_Plain_SqlEditor.php" title="Editor de CodeMirror de sintaxe destacada para SQL.">
+                SQL (text/plain: SqlEditor)
+            </option>
+                                                                    <option value="Input/Text_Plain_XmlEditor.php" title="Editor de CodeMirror de sintaxe destacada para XML (e HTML).">
+                XML (text/plain: XmlEditor)
+            </option>
+                                                                    <option value="Text_Plain_Link.php" title="Mostra um link, o campo contém o nome do ficheiro. A primeira opção é um prefixo URL como &quot;https://www.exemplo.com/&quot;. A segunda opção é um título para o link.">
+                TextLink (text/plain: Link)
+            </option>
+                                                                    <option value="Text_Plain_Longtoipv4.php" title="Converte um endereço de IP (IPv4), armazenado como BIGINT, em uma cadeia formatada com pontuação de referência de Internet.">
+                Long To IPv4 (text/plain: Longtoipv4)
+            </option>
+                                                                    <option value="Text_Plain_PreApPend.php" title="Adiciona texto a uma cadeia. A primeira opção é o texto a ser prefixado, a segunda é sufixado (envolvido por aspas simples, cadeia vazia por predefinição).">
+                PreApPend (text/plain: PreApPend)
+            </option>
+                                                                    <option value="Text_Plain_Substring.php" title="Mostra uma parte de uma cadeia. A primeira opção é a quantidade de caracteres a pular a partir do início da cadeia. (A predefinição é 0). A segunda opção é a quantidade de caracteres a retornar (Predefinição: até o fim da cadeia). A terceira opção é a cadiea a adicionar depois ou antes quando truncamentos ocorrerem (Predefinição: &quot;...&quot;).">
+                Substring (text/plain: Substring)
+            </option>
+            </select>
+            </td>
+    <td class="center">
+                <input id="field_0_16" type="text" name="field_input_transformation_options[0]" size="16" class="textfield">
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+            <fieldset class="tblFooters">
+        <input type="button" class="preview_sql" value="Pré-visualizar SQL">
+        <input type="submit" name="do_save_data" value="Guarda">
+    </fieldset>
+    <div id="properties_message"></div>
+<input type="hidden" name="do_save_data" value="Guarda"><input type="hidden" id="ajax_request_hidden" name="ajax_request" value="true"></form>
+</div><div id="selflink" class="print_ignore"><a href="http://localhost/phpmyadmin/tbl_structure.php?db=StartSom&amp;table=atividades&amp;server=1&amp;target=" title="Abrir nova janela do phpMyAdmin" target="_blank" rel="noopener noreferrer"><img src="localhost%20_%20localhost%20_%20StartSom%20_%20atividades%20phpMyAdmin%204.9.5deb2_arquivos/dot.gif" title="Abrir nova janela do phpMyAdmin" alt="Abrir nova janela do phpMyAdmin" class="icon ic_window-new"></a></div><div class="clearfloat" id="pma_errors"></div><script data-cfasync="false" type="text/javascript">// <![CDATA[
+var debugSQLInfo = 'null';
+AJAX.scriptHandler;
+$(function() {});
+// ]]></script><div id="pma_footer"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>

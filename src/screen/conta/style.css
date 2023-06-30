@@ -1,0 +1,117 @@
+/**********************************************Perfil**********************************************/
+body {
+  background-color: #fff;
+}
+.PerfilC {
+  text-align: center;
+  font-size: 170%;
+}
+.PerfilC img {
+  width: 15%;
+  height: 15%;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.informaçao {
+  text-align: center;
+}
+
+.informaçao h3 {
+  margin: 20px;
+  font-size: 30px;
+}
+
+.informaçao p {
+  margin: 20px;
+  font-size: 20px;
+}
+.sobreMim {
+  padding: 20px;
+  width: 600px;
+  height: 150px;
+  margin: 10px;
+}
+.sairUser {
+  border: none;
+  background-color: #db7713;
+  margin: 20px;
+  padding: 10px 0px;
+  cursor: pointer;
+  width: 200px;
+}
+#loginUser {
+  border: none;
+  background-color: #db7713;
+  padding: 10px 00px;
+  cursor: pointer;
+  width: 200px;
+}
+.container {
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.lista {
+  border: 2px solid rgba(230, 107, 26, 0.692);
+  margin: 30px;
+  height: 68%;
+  width: 60%;
+  min-width: 290px;
+  border-radius: 20px;
+  overflow-y: auto;
+}
+
+.lista button {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  top: 10px;
+}
+.lista h1 {
+  text-align: center;
+  padding: 20px;
+}
+.lista img {
+  height: 30px;
+  width: 30px;
+}
+.lista input {
+  height: 30px;
+  width: 40%;
+  border-radius: 10px;
+  border: 1px solid rgb(230, 107, 26, 0.692);
+  outline: none;
+}
+.lista li {
+  border-radius: 20px;
+  padding: 10px 90px;
+  margin: 16px 80px;
+  text-align: left;
+  box-shadow: 2px 2px 7px 1px rgba(112, 112, 112, 0.637);
+  border: 1px solid rgb(230, 107, 26, 0.692);
+}
+.lista li img {
+  background-image: left;
+  width: 25px;
+  height: 25px;
+}
+#deletar {
+  position: sticky;
+  left: 80%;
+  cursor: pointer;
+}
+/*********************************************Footer*********************************************/
+.midia {
+  background-color: #db7713c7;
+  height: 100px;
+}
+
+.midia p {
+  position: relative;
+  top: 50px;
+}
