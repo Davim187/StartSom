@@ -11,7 +11,7 @@ import lixo from '../../img/conta/lixo.png';
 function Conta() {
   const [InputTarefas, setInputTarefas] = useState('');
   const [lista, setLista] = useState([]);
-  const [getAlitivades, setGetAtividades] = useState(
+  const [getAtitivades, setGetAtividades] = useState(
     JSON.parse(localStorage.getItem('TarefaUse'))
   );
   const [User, setUser] = useState(JSON.parse(localStorage.getItem('User')));
@@ -75,7 +75,7 @@ function Conta() {
                   'TarefaUse',
                   JSON.stringify(res.data.tarefas)
                 );
-                console.log(getAlitivades);
+                console.log(getAtitivades);
               });
             });
           });
@@ -102,7 +102,7 @@ function Conta() {
           .then((res) => {
             localStorage.setItem('TarefaUse', JSON.stringify(res.data.tarefas));
             console.log(res.data.tarefas);
-            console.log(getAlitivades);
+            console.log(getAtitivades);
           })
           .then(() => {
             Swal.fire({
@@ -164,7 +164,7 @@ function Conta() {
               <img src={mais} alt="Adicionar" style={{ cursor: 'pointer' }} />
             </button>
             <ul id="list" style={{ listStyle: 'none' }}>
-              {getAlitivades.map((t) => {
+              {getAtitivades.map((t) => {
                 return (
                   <li id={`${t.codigo}`} key={`_${t.atividade}_${t.id}`}>
                     {' '}

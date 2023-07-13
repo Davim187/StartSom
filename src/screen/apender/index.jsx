@@ -21,11 +21,11 @@ import Am from '../../img/aprender/notasMenor/Am.png';
 import Bm from '../../img/aprender/notasMenor/Bm.png';
 
 function Aprender() {
-  useEffect(() => {
-    if (!localStorage.getItem('User')) {
-      window.location.href = '/';
-    }
-  });
+  // useEffect(() => {
+  //   if (!localStorage.getItem('User')) {
+  //     window.location.href = '/';
+  //   }
+  // });
   return (
     <>
       <Header />

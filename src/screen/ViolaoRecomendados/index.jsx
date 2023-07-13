@@ -10,11 +10,11 @@ import RX201 from '../../img/recomendados/8851296610681f5f39.jpg';
 import './style.css';
 
 function Recomendados() {
-  useEffect(() => {
-    if (!localStorage.getItem('User')) {
-      window.location.href = '/';
-    }
-  });
+  // useEffect(() => {
+  //   if (!localStorage.getItem('User')) {
+  //     window.location.href = '/';
+  //   }
+  // });
   return (
     <>
       <Header />
@@ -78,27 +78,11 @@ function Recomendados() {
               <h1>Rx201 - Rozini</h1>
 
               <p>
-                O Rozini RX201 ACFI, é um Violão Clássico da linha Estudante,
-                construido com tampo de Marfim Laminado, laterais e fundo de
-                Imbuia Laminada e braço em Cedro com escala de Purple Heart.
-                Essa seleção de materiais unidos a uma boa construção,
-                proporcionam ao instrumento um timbre versátil e equilibrado, o
-                que torna o RX201 ACFI a escolha perfeita para seus estudos!
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img class="image_container" src="/Imagens/download.jpeg" alt="" />
-            <div class="text_back">
-              <h1>Lorem ipsum</h1>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
-                nunc vel lectus commodo aliquet ac vel velit.
-                <br /> <br />
-                Vivamus cursus a nunc vitae blandit. Duis quam justo, sagittis a
-                fringilla quis, facilisis eu mauris.
+                O Rozini RX201 , construido com tampo de Marfim Laminado,
+                laterais e fundo de Imbuia Laminada e braço em Cedro com escala
+                de Purple Heart. Essa seleção de materiais unidos a uma boa
+                construção, proporcionam ao instrumento um timbre versátil , o
+                que torna a escolha perfeita para seus estudos!
               </p>
             </div>
           </div>
