@@ -10,11 +10,11 @@ import RX201 from '../../img/recomendados/8851296610681f5f39.jpg';
 import './style.css';
 
 function Recomendados() {
-  // useEffect(() => {
-  //   if (!localStorage.getItem('User')) {
-  //     window.location.href = '/';
-  //   }
-  // });
+  useEffect(() => {
+    if (!localStorage.getItem('User')) {
+      window.location.href = '/';
+    }
+  });
   return (
     <>
       <Header />

@@ -9,11 +9,11 @@ import eletrico from '../../img/home/eletrico.png';
 import userEvent from '@testing-library/user-event';
 
 function Home() {
-  // useEffect(() => {
-  //   if (!localStorage.getItem('User')) {
-  //     window.location.href = '/';
-  //   }
-  // });
+  useEffect(() => {
+    if (!localStorage.getItem('User')) {
+      window.location.href = '/';
+    }
+  });
   return (
     <div>
       {/******************************************* Header *******************************************/}
