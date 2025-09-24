@@ -47,12 +47,12 @@ function Header() {
           <div id={EsconderMenu === false ? 'menu' : 'esconderMenu'}>
             <ul>
               <li>
-                <a href="home">
+                <a href="#/home">
                   <img src={ImgHomeMenu} alt="Home" />
                 </a>
               </li>
               <li>
-                <a href="Recomendados">
+                <a href="#/Recomendados">
                   <img
                     style={{ width: '50px' }}
                     src={ImgViolaoMenu}
@@ -61,7 +61,7 @@ function Header() {
                 </a>
               </li>
               <li>
-                <a href="Aprender">
+                <a href="#/Aprender">
                   <img
                     style={{ width: '50px' }}
                     src={ImgpalhetaMenu}
@@ -70,7 +70,7 @@ function Header() {
                 </a>
               </li>
               <li>
-                <a href="Conta">
+                <a href="#/Conta">
                   <img src={ImgContaMenu} alt="Conta" />
                 </a>
               </li>

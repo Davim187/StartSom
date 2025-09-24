@@ -11,7 +11,7 @@ import userEvent from '@testing-library/user-event';
 function Home() {
   useEffect(() => {
     if (!localStorage.getItem('User')) {
-      window.location.href = '/';
+      window.location.href = '#/';
     }
   });
   return (

@@ -1,130 +1,110 @@
-import React, { useEffect, useState } from 'react';
-import Header from '../../componentes/header';
-import './style.css';
-import Swal from 'sweetalert2';
-import api from '../../services/api';
+import React, { useEffect, useState } from "react";
+import Header from "../../componentes/header";
+import "./style.css";
+import Swal from "sweetalert2";
 
-import perfil from '../../img/conta/perfil.png';
-import mais from '../../img/conta/+.png';
-import lixo from '../../img/conta/lixo.png';
+import perfil from "../../img/conta/perfil.png";
+import mais from "../../img/conta/+.png";
+import lixo from "../../img/conta/lixo.png";
 
 function Conta() {
-  const [InputTarefas, setInputTarefas] = useState('');
+  const [InputTarefas, setInputTarefas] = useState("");
   const [lista, setLista] = useState([]);
-  const [getAtitivades, setGetAtividades] = useState(
-    JSON.parse(localStorage.getItem('TarefaUse'))
-  );
-  const [User, setUser] = useState(JSON.parse(localStorage.getItem('User')));
+  const [getAtitivades, setGetAtividades] = useState([]);
+  const [User, setUser] = useState([]);
   var id;
   var AttAtividades;
   useEffect(() => {
-    if (!localStorage.getItem('User')) {
-      window.location.href = '/';
+    setUser(JSON.parse(localStorage.getItem("User")));
+    const atividades = JSON.parse(localStorage.getItem("atividades")) || [];
+    const atividadesUser = atividades.filter(
+      (t) => t.userId === User.id && t.status === 1
+    );
+    setGetAtividades(atividadesUser);
+
+    if (!localStorage.getItem("User")) {
+      window.location.href = "#/";
     }
-  }, []);
+  }, [lista]);
 
   function SairUserLogin() {
-    localStorage.removeItem('Token');
-    localStorage.removeItem('User');
-    window.location.href = '/';
+    localStorage.removeItem("User");
+    window.location.href = "#/";
   }
   const adicionar = async () => {
-    if (InputTarefas === '') {
+    if (InputTarefas === "") {
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Preencha o campo corretamente',
+        icon: "error",
+        title: "Oops...",
+        text: "Preencha o campo corretamente",
       });
     } else if (InputTarefas.length <= 3) {
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Minimo de 4 digitos',
+        icon: "error",
+        title: "Oops...",
+        text: "Minimo de 4 digitos",
       });
     } else {
       try {
         id = parseInt(Math.random() * 10000000000) + String(User.id);
-        await api
-          .post('/cadastraAtividade', {
-            codigo: id,
-            idUsuario: User.id,
+
+        let atividades = JSON.parse(localStorage.getItem("atividades")) || [];
+        Swal.fire({
+          title: "Aguarde",
+          text: "Cadastrando tarefa",
+          timer: 2000,
+          didOpen: () => {
+            Swal.showLoading();
+          },
+        }).then(async () => {
+          Swal.fire({
+            icon: "success",
+            title: "Sucesso",
+            text: "Tarefa ja cadastrada",
+          });
+          const novaAtividade = {
+            id: id,
             atividade: InputTarefas,
             status: 1,
-          })
-          .then((res) => {
-            console.log(res.data);
-            setInputTarefas('');
-            Swal.fire({
-              title: 'Aguarde',
-              text: 'Cadastrando tarefa',
-              timer: 2000,
-              didOpen: () => {
-                Swal.showLoading();
-              },
-            }).then(async () => {
-              Swal.fire({
-                icon: 'success',
-                title: 'Sucesso',
-                text: 'Tarefa ja cadastrada',
-              }).then(() => {
-                window.location.reload();
-              });
-              await api.get(`/pegarAtividade/${User.id}`).then((res) => {
-                console.log(res.data.tarefas);
-                localStorage.setItem(
-                  'TarefaUse',
-                  JSON.stringify(res.data.tarefas)
-                );
-                console.log(getAtitivades);
-              });
-            });
-          });
+            userId: User.id,
+          };
+          atividades.push(novaAtividade);
+          localStorage.setItem("atividades", JSON.stringify(atividades));
+          setLista(atividades);
+          setInputTarefas("");
+        });
       } catch (error) {
         const status = error.response.status;
         if (status === 401) {
           Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Tarefa ja cadastrada',
+            icon: "error",
+            title: "Oops...",
+            text: "Tarefa ja cadastrada",
           });
         }
       }
     }
   };
   const remove = async (codigo) => {
-    await api
-      .patch(`/deletAtividade/${codigo}`, {
-        status: 2,
+    let atividades = JSON.parse(localStorage.getItem("atividades")) || [];
+    
+
+      Swal.fire({
+        icon: "success",
+        title: "Sucesso",
+        text: "Tarefa deletada",
       })
-      .then(async () => {
-        await api
-          .get(`/pegarAtividade/${User.id}`)
-          .then((res) => {
-            localStorage.setItem('TarefaUse', JSON.stringify(res.data.tarefas));
-            console.log(res.data.tarefas);
-            console.log(getAtitivades);
-          })
-          .then(() => {
-            Swal.fire({
-              title: 'Aguarde',
-              text: 'Deletando tarefa',
-              timer: 3300,
-              didOpen: () => {
-                Swal.showLoading();
-              },
-            }).then(async () => {
-              Swal.fire({
-                icon: 'success',
-                title: 'Sucesso',
-                text: 'Tarefa deletada',
-              }).then(() => {
-                setTimeout(() => {
-                  window.location.reload();
-                }, 500);
-              });
-            });
-          });
-      });
+    AttAtividades = atividades.map((t) => {
+  
+      if (t.id === codigo) {
+        t.status = 0;
+      }
+      return t;
+    });
+    
+    localStorage.setItem("atividades", JSON.stringify(AttAtividades));
+    setLista(AttAtividades);
+
   };
   return (
     <>
@@ -132,7 +112,7 @@ function Conta() {
       {/* <!----------------------------------- Perfil ----------------------------------> */}
       <div className="PerfilC">
         <img src={perfil} alt="Perfil" />
-        <h2 id="nome1"> {User ? User.usuario : 'nome'}</h2>
+        <h2 id="nome1"> {User ? User.usuario : "nome"}</h2>
         <button className="sairUser" onClick={() => SairUserLogin()}>
           Sair
         </button>
@@ -141,9 +121,9 @@ function Conta() {
       <article>
         <div className="informaçao">
           <h3>Nome</h3>
-          <p id="nome"> {User ? User.usuario : 'nome'}</p>
+          <p id="nome"> {User ? User.usuario : "nome"}</p>
           <h3>Email</h3>
-          <p id="email">{User ? User.email : 'email'}</p>
+          <p id="email">{User ? User.email : "email"}</p>
           <h3>Sobre mim:</h3>
           <textarea className="sobreMim"></textarea> <br />
         </div>
@@ -161,28 +141,27 @@ function Conta() {
               }}
             />
             <button type="submit" onClick={() => adicionar()}>
-              <img src={mais} alt="Adicionar" style={{ cursor: 'pointer' }} />
+              <img src={mais} alt="Adicionar" style={{ cursor: "pointer" }} />
             </button>
-            <ul id="list" style={{ listStyle: 'none' }}>
+            <ul id="list" style={{ listStyle: "none" }}>
               {getAtitivades.map((t) => {
                 return (
                   <li id={`${t.codigo}`} key={`_${t.atividade}_${t.id}`}>
-                    {' '}
+                    {" "}
                     {t.atividade}
-                    <button id="deletar" onClick={() => remove(t.codigo)}>
+                    <button id="deletar" onClick={() => remove(t.id)}>
                       <img src={lixo} alt="Lixo" />
                     </button>
                   </li>
                 );
               })}
-              {/* { getAtividade()} */}
             </ul>
           </div>
         </div>
         {/* <!----------------------------------- footer ----------------------------------> */}
         <footer className="midia">
           <p>
-            {' '}
+            {" "}
             Copyright - StartSom | Todos os direitos reservados | Desenvolvido
             por Davi Morais
           </p>

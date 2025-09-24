@@ -23,7 +23,7 @@ import Bm from '../../img/aprender/notasMenor/Bm.png';
 function Aprender() {
   useEffect(() => {
     if (!localStorage.getItem('User')) {
-      window.location.href = '/';
+      window.location.href = '#/';
     }
   });
   return (

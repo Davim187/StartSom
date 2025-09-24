@@ -1,5 +1,5 @@
 {
-  "homepage": "https://davim187.github.io/StartSom/",
+  "homepage": "https://davim187.github.io/StartSom",
   "name": "startsom",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "react-router-dom": "^6.11.1"
   }
 }

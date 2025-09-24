@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// src/routers/routers.js
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
+// Importando seus componentes reais
 import Login from '../screen/login';
 import Cadastro from '../screen/cadastro';
 import Home from '../screen/home';
@@ -11,21 +11,17 @@ import Conta from '../screen/conta';
 
 function Routers() {
   return (
-    // --------------------------------- Rotas  --------------------------------- //
-    <div>
-      <BrowserRouter>
+    <HashRouter>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="Cadastro" element={<Cadastro />} />
-          <Route path="Home" element={<Home />} />
-          <Route path="Recomendados" element={<Recomendados />} />
-          <Route path="Aprender" element={<Aprender />} />
-          <Route path="Conta" element={<Conta />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/recomendados" element={<Recomendados />} />
+          <Route path="/aprender" element={<Aprender />} />
+          <Route path="/conta" element={<Conta />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+    </HashRouter>
   );
 }
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Routers />);
+
 export default Routers;
