@@ -4,11 +4,11 @@ O StartSom é um site educativo voltado para violão, oferecendo conteúdos expl
 
 # 🧩 Funcionalidades
 
-# 📖 Explicações e tutoriais sobre violão.
+📖 Explicações e tutoriais sobre violão.
 
-# ✅ Lista de tarefas para acompanhamento de estudos.
+ ✅ Lista de tarefas para acompanhamento de estudos.
 
-# 🖥️ Interface simples e intuitiva, fácil de navegar.
+ 🖥️ Interface simples.
 
 
 # 🛠️ Tecnologias Utilizadas
